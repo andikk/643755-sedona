@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Андрей Диканский](https://up.htmlacademy.ru/adaptive/15/user/643755).
-* Наставник: `Неизвестно`.
+* Студент: [Андрей Диканский (andikk)](https://up.htmlacademy.ru/adaptive/15/user/643755).
+* Наставник: [Виталя Игошин (vitaligo)](https://htmlacademy.ru/profile/id353627).
 
 ---
 
