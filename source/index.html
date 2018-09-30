@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
@@ -7,6 +7,12 @@
   <body>
 
     <header class="page-header">
+      <div class="logo-section__wrapper">
+        <a class="page-header__logo">
+          <img class="page-header__logo-image" src="http://placehold.it/102x83" width="102" height="83" alt="Седона">
+        </a>
+      </div>
+
       <nav class="main-nav">
         <div class="main-nav__wrapper">
           <button class="main-nav__button-close" type="button">Закрыть меню</button>
@@ -27,26 +33,21 @@
         </div>
       </nav>
 
-      <div class="logo-section__wrapper">
-        <a class="page-header__logo">
-          <img class="page-header__logo-image" src="http://placehold.it/102x83" width="102" height="83" alt="Седона">
-        </a>
-        <button class="main-nav__button-open" type="button">Открыть меню</button>
-      </div>
-
       <div class="intro__header">
         <p class="visually-hidden">Welcome to the gorgeous</p>
-        <h1 class="visually-hidden">Sedona</h1>
+        <h2 class="visually-hidden">Sedona</h2>
         <p class="visually-hidden">Because the Grand Canyon sucks!</p>
       </div>
     </header>
 
     <main class="page-main">
-      <section class="reasons section">
-        <h3 class="section__title">
+      <h1 class="visually-hidden">Sedona</h1>
+      <section class="reasons page__section">
+        <h2 class="visually-hidden">Причины по которым стоит посетить Седону</h2>
+        <h3 class="page__subtitle">
           Седона - небольшой городок в Аризоне, заслуживающий большего!
         </h3>
-        <h2 class="section__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</h2>
+        <h2 class="page__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</h2>
         <ul class="reasons__list">
           <li class="reasons__item reasons__item--one">
             <h3 class="reasons__title">Настоящий городок</h3>
@@ -92,17 +93,17 @@
         </ul>
       </section>
 
-      <section class="order section">
-        <h3 class="section__title">Заинтересовались?</h3>
-        <p class="section__text">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-        <button class="order__button" type="button">Найти гостиницу</button>
+      <section class="order page__section">
+        <h3 class="page__subtitle">Заинтересовались?</h3>
+        <p class="page__text">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+        <a href="#" class="order__button">Найти гостиницу</button>
         <div class="order__map">
         </div>
       </section>
     </main>
 
-    <footer class="page-footer section">
-      <h3 class="section__title">#VisitSedona</h3>
+    <footer class="page-footer page__section">
+      <h3 class="page__subtitle">#VisitSedona</h3>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
@@ -121,7 +122,5 @@
         <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>
-
-
   </body>
 </html>
