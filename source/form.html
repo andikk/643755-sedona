@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
 
-    <header class="page-header">
+   <header class="page-header">
+      <div class="logo-section__wrapper">
+        <a class="page-header__logo">
+          <img class="page-header__logo-image" src="http://placehold.it/102x83" width="102" height="83" alt="Седона">
+        </a>
+      </div>
+
       <nav class="main-nav">
         <div class="main-nav__wrapper">
           <button class="main-nav__button-close" type="button">Закрыть меню</button>
@@ -27,22 +33,15 @@
         </div>
       </nav>
 
-      <div class="logo-section__wrapper">
-        <a class="page-header__logo">
-          <img class="page-header__logo-image" src="http://placehold.it/102x83" width="102" height="83" alt="Седона">
-        </a>
-        <button class="main-nav__button-open" type="button">Открыть меню</button>
-      </div>
-
-      <div class="page-header__title">
-        <h1 class="site-title">Sedona</h1>
+      <div class="intro__header">
+        <h2 class="visually-hidden">Sedona</h2>
       </div>
     </header>
 
     <main class="page-main">
-      <section class="form section">
-        <h3 class="section__title">Оставь свои отзыв</h3>
-        <p class="section__text">Помогите нашим отелям стать лучше! Оставь отзыв о них, а также о посещенных вами достопримечательностях</p>
+      <section class="form page__section">
+        <h3 class="page__subtitle">Оставь свои отзыв</h3>
+        <p class="page__text">Помогите нашим отелям стать лучше! Оставь отзыв о них, а также о посещенных вами достопримечательностях</p>
         <form id="form-review" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="form__section">
             <legend class="form__section-title">Представьтесь:</legend>
@@ -119,11 +118,10 @@
           <input type="submit" class="form__button" name="button-send" id="button-send" value="Отправить отзыв">
         </form>
       </section>
-
     </main>
 
-    <footer class="page-footer section">
-      <h3 class="section__title">#VisitSedona</h3>
+    <footer class="page-footer page__section">
+      <h3 class="page__subtitle">#VisitSedona</h3>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
@@ -142,7 +140,5 @@
         <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>
-
-
   </body>
 </html>
