@@ -24,7 +24,7 @@
               <a href="photo.html">Фото и видео</a>
             </li>
             <li class="nav-list__item">
-              <a href="form.html">Форма отзыва</a>
+              <a>Форма отзыва</a>
             </li>
             <li class="nav-list__item">
               <a href="#">HTML Academy</a>
@@ -46,16 +46,16 @@
           <fieldset class="form__section">
             <legend class="form__section-title">Представьтесь:</legend>
             <ul class="form__list">
-              <li class="form__list-item">
-                <label class="form__item-title" for="first-name">Имя<sup>*</sup>:</label>
+              <li class="form__item">
+                <label class="form__label" for="first-name">Имя<sup>*</sup>:</label>
                 <input class="form__input" type="text" name="first-name" id="first-name" placeholder="Петр">
               </li>
-              <li class="form__list-item">
-                <label class="form__item-title" for="second-name">Фамилия<sup>*</sup>:</label>
+              <li class="form__item">
+                <label class="form__label" for="second-name">Фамилия<sup>*</sup>:</label>
                 <input class="form__input" type="text" name="second-name" id="second-name" placeholder="Иванов">
               </li>
-              <li class="form__list-item">
-                <label class="form__item-title" for="middle-name">Отчество:</label>
+              <li class="form__item">
+                <label class="form__label" for="middle-name">Отчество:</label>
                 <input  class="form__input" type="text" name="middle-name" id="middle-name" placeholder="Александрович">
               </li>
             </ul>
@@ -63,12 +63,12 @@
           <fieldset class="form__section">
             <legend class="form__section-title">Контактная информация:</legend>
             <ul class="form__list">
-              <li class="form__list-item">
-                <label class="form__item-title" for="tel">Контактный телефон<sup>*</sup>:</label>
+              <li class="form__item">
+                <label class="form__label" for="tel">Контактный телефон<sup>*</sup>:</label>
                 <input class="form__input" type="tel" name="tel" id="tel" placeholder="Введите телефон">
               </li>
-              <li class="form__list-item">
-                <label class="form__item-title" for="e-mail">Электронная почта<sup>*</sup>:</label>
+              <li class="form__item">
+                <label class="form__label" for="e-mail">Электронная почта<sup>*</sup>:</label>
                 <input class="form__input" type="email" name="e-mail" id="e-mail" placeholder="Введите e-mail">
               </li>
             </ul>
@@ -76,36 +76,36 @@
           <fieldset class="form__section">
             <legend class="form__section-title">Ваше общее впечатление:</legend>
             <ul class="form__list">
-              <li class="form__list-item">
+              <li class="form__item">
                 <input class="form__radio-control form__radio-control--checked visually-hidden" type="radio" name="impression" id="positive" value="positive" checked>
-                <label class="form__radio-control-title" for="positive">Сокрее положительное</label>
+                <label class="form__label" for="positive">Сокрее положительное</label>
               </li>
-              <li class="form__list-item">
+              <li class="form__item">
                 <input class="form__radio-control visually-hidden" type="radio" name="impression" id="negative" value="negative">
-                <label class="form__radio-control-title" for="negative">Сокрее отрицательное</label>
+                <label class="form__label" for="negative">Сокрее отрицательное</label>
               </li>
-              <li class="form__list-item">
+              <li class="form__item">
                 <input class="form__radio-control visually-hidden" type="radio" name="impression" id="no-idea" value="no-idea">
-                <label class="form__radio-control-title" for="negative">Затрудняюсь ответить</label>
+                <label class="form__label" for="negative">Затрудняюсь ответить</label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="form__section">
             <legend class="form__section-title">Посещенные достопримечательности:</legend>
             <ul class="form__list">
-              <li class="form__list-item">
+              <li class="form__item">
                 <input class="form__checkbox form__checkbox--checked visually-hidden" type="checkbox" name="bridge-of-devil" id="bridge" checked>
                 <label class="form__checkbox-title" for="bridge">Мост Дьявола</label>
               </li>
-              <li class="form__list-item">
+              <li class="form__item">
                 <input class="form__checkbox form__checkbox--checked visually-hidden" type="checkbox" name="mount-bell" id="mount-bell" checked>
                 <label class="form__checkbox-title" for="mount-bell">Гора Колокол</label>
               </li>
-              <li class="form__list-item">
+              <li class="form__item">
                 <input class="form__checkbox form__checkbox--checked visually-hidden" type="checkbox" name="slide-park" id="slide-park" checked>
                 <label class="form__checkbox-title" for="slide-park">Слайд-парк</label>
               </li>
-              <li class="form__list-item">
+              <li class="form__item">
                 <input class="form__checkbox visually-hidden" type="checkbox" name="red-rocks" id="red-rocks" checked>
                 <label class="form__checkbox-title" for="red-rocks">Красные скалы</label>
               </li>
@@ -113,6 +113,7 @@
           </fieldset>
           <fieldset class="form__section">
             <legend class="form__section-title">Опишите свои эмоции:</legend>
+            <label class="visually-hidden for="message">Ваше сообщение</label>
             <textarea name="form__message" id="message" required>Опишите подробно все свои восторги</textarea>
           </fieldset>
           <input type="submit" class="form__button" name="button-send" id="button-send" value="Отправить отзыв">
