@@ -7,5 +7,8 @@ http://lesscss.org
 Структура файлов:
 
 less/
-| - style.less
-| - [другие *.less файлы]
+style.less
+page.less
+page-header.less
+
+
