@@ -15,6 +15,7 @@ less/
     page__section
     page__subtitle
     page__text
+    page_button
 
   page-header.less
     page-header__logo-wrapper
