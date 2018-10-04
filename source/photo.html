@@ -10,31 +10,31 @@
     <header class="page-header">
       <div class="page-header__logo-wrapper">
         <a class="page-header__logo-link" href="">
-          <img class="page-header__logo-image" src="http://placehold.it/102x83" width="102" height="83" alt="Седона">
+          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона">
         </a>
       </div>
 
       <nav class="main-nav">
         <div class="main-nav__wrapper">
-          <button class="main-nav__button-close" type="button">Закрыть меню</button>
+          <button class="main-nav__button main-nav__button--close" type="button">Закрыть меню</button>
           <ul class="main-nav__list nav-list">
             <li class="nav-list__item nav-list__item--active">
-              <a href="index.html">Главная</a>
+              <a class="nav-list__link">Главная</a>
             </li>
             <li class="nav-list__item">
-              <a>Фото и видео</a>
+              <a class="nav-list__link" href="photo.html">Фото и видео</a>
             </li>
             <li class="nav-list__item">
-              <a href="form.html">Форма отзыва</a>
+              <a class="nav-list__link" href="form.html">Форма отзыва</a>
             </li>
             <li class="nav-list__item">
-              <a href="#">HTML Academy</a>
+              <a class="nav-list__link" href="#">HTML Academy</a>
             </li>
           </ul>
         </div>
       </nav>
 
-      <div class="page-header__intro">
+      <div class="page-header__intro--other">
         <h2 class="visually-hidden">Sedona</h2>
       </div>
     </header>
@@ -45,25 +45,25 @@
         <p class="page__text">Не можете решиться на путешествие из-за курса? Фотографии помогут Вам забыть о политике и экономике.</p>
         <ul class="photo__list">
           <li class="photo__item">
-            <img class="photo__picture" src="http://placehold.it/280x280" width="280" height="280" alt="Народные просторы">
+            <img class="photo__picture" src="img/photo-sunset-mobile@1x.jpg" alt="Народные просторы">
             <h3 class="photo__title">Народные просторы</h3>
             <p class="photo__text">Автор фото: Борис</p>
             <p class="photo__like">1350</p>
           </li>
           <li class="photo__item">
-            <img class="photo__picture" src="http://placehold.it/280x280" width="280" height="280" alt="Местная растительность">
+            <img class="photo__picture" src="img/photo-cactus-mobile@1x.jpg" alt="Местная растительность">
             <h3 class="photo__title">Местная растительность</h3>
             <p class="photo__text">Автор фото: Сергей</p>
             <p class="photo__like">143</p>
           </li>
           <li class="photo__item">
-            <img class="photo__picture" src="http://placehold.it/280x280" width="280" height="280" alt="Дорога">
+            <img class="photo__picture" src="img/photo-roads-mobile@1x.jpg" alt="Дорога">
             <h3 class="photo__title">Дорога на Север</h3>
             <p class="photo__text">Автор фото: Петр</p>
             <p class="photo__like">96</p>
           </li>
           <li class="photo__item">
-            <img class="photo__picture" src="http://placehold.it/280x280" width="280" height="280" alt="Мост дьявола">
+            <img class="photo__picture" src="img/photo-bridge-mobile@1x.jpg" alt="Мост дьявола">
             <h3 class="photo__title">Мост дьявола</h3>
             <p class="photo__text">Автор фото: Антон</p>
             <p class="photo__like">254</p>
@@ -75,7 +75,9 @@
         <h3 class="page__subtitle">Все еще сомневаетесь?</h3>
         <h2 class="visually-hidden">Видеопрезентация</h2>
         <p class="page__text">Смотрите видеопрезентацию и сокрее за билетам, пока они не подорожали в очередной раз!</p>
-        <div class="video__file"></div>
+        <div class="video__file">
+          <img class="video__file-img" src="img/video-mobile@1x.jpg" alt="Видеопрезентация">
+        </div>
         <div class="video__controls">
           <div class="video__toogler"></div>
           <div class="video__buttons">
@@ -103,7 +105,7 @@
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
+        <b class="copyright__text page__subtitle">Разработано:</b>
         <a class="copyright__button" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>

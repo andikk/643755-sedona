@@ -4,6 +4,7 @@
 
 .page-header__logo-wrapper {
   background-color: @white;
+  .text-center();
 }
 
 .page-header__logo-link {
@@ -16,9 +17,18 @@
 
 .page-header__intro {
   background-color: @blue;
-  background-image: url("../img/bg-intro-triangle-mobile.svg");
-  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-image: url("../img/text-sedona-index.svg"), url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size:cover;
+  background-position: center, center;
   min-height: 390px;
 }
+
+.page-header__intro--other {
+  background-color: @blue;
+  background-image: url("../img/text-sedona.svg"), url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center, center;
+  min-height: 390px;
+}
+
+
