@@ -1,6 +1,6 @@
 .nav-list__item {
   .text-center();
-  background-color: @blue;
+  background-color: @primary-color;
 
   &--active {
 
@@ -10,15 +10,15 @@
 .nav-list__link {
   .text-uppercase();
   color:@white;
-  background-color: @blue;
+  background-color: @primary-color;
   box-shadow: 0px 1px 0 0 rgba(1, 1, 1, 0.2), inset 0px 1px 0 0 rgba(255, 255, 255, 0.2);
   display: block;
 
   &::hover {
-    background-color: @menu-item-hover-color;
+    background-color: @hover-color;
   }
 
   &::active {
-    background-color: @menu-item-active-color;
+    background-color: @active-color;
   }
 }
