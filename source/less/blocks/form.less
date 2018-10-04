@@ -27,15 +27,22 @@
 }
 
 .form__input {
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.44;
-  letter-spacing: normal;
-  text-align: left;
+  padding: 0;
+  font-family: "PT Sans", "Tahoma", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
   color: @black;
   background-color: @grey;
+  border: none;
+  &::placeholder {
+    color: @black;
+    opacity: 1;
+  }
 }
+
+
+
 
 .form__radio-control {
 
