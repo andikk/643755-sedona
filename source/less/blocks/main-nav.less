@@ -1,12 +1,38 @@
 .main-nav__wrapper {
-  background-color: @blue;
+  position: relative;
+
 }
 
 .main-nav__button {
   &--close {
     color: @white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 23px;
+    height: 22px;
+  }
+
+  &--close::before,
+  &--close::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    width: 19px;
+    height: 3px;
+  }
+
+  &--close::before {
+    transform: rotate(45deg);
+  }
+
+  &--close::after {
+    transform: rotate(-45deg);
   }
 }
+
+
 
 .main-nav__list {
   .list-unstyled();
