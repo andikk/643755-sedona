@@ -33,12 +33,23 @@
   font-weight: 700;
   line-height: 26px;
   color: @black;
-  background-color: @grey;
+  background-color: @input-color;
   border: none;
+
   &::placeholder {
     color: @black;
     opacity: 1;
   }
+
+  &::hover {
+    background-color: @input-hover-color;
+  }
+
+  &::focus {
+    background-color: @white;
+    border: solid 4px #e5e5e5;
+  }
+
 }
 
 
