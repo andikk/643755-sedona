@@ -49,6 +49,34 @@
 }
 
 @media (min-width: @tablet-width) {
+  .reasons__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .reasons__item {
+    &--one {
+      width: 100%;
+    }
+
+    &--two {
+      width: 100%;
+    }
+
+    &--three {
+      width: 33%;
+    }
+
+    &--four {
+      width: 33%;
+    }
+
+    &--five {
+      width: 33%;
+    }
+  }
+
   .reasons__wrapper-item {
     display: flex;
   }
@@ -58,7 +86,6 @@
     &--right {
       order: 1;
     }
-
   }
 
   .reasons__image {
