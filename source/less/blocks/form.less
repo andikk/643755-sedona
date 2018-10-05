@@ -3,6 +3,7 @@
   padding: 0 0;
   border: none;
   border-bottom: 1px solid @border-color;
+  display: block;
 }
 
 .form__list {
@@ -71,4 +72,19 @@
 
 .form__button {
   width: 25%;
+}
+
+@media (min-width: @tablet-width) {
+  .form-wrapper {
+    display: flex;
+  }
+
+  .form__section--sights, .form__section--introduce {
+    width: 50%;
+  }
+
+  .form__section--contacts {
+    width: 100%;
+  }
+
 }
