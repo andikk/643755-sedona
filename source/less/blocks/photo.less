@@ -22,6 +22,9 @@
 @media (min-width: @tablet-width) {
   .photo__item {
     width: 325px;
+    background-color: @grey;
+    padding: 0;
+    border-bottom: none;
     &--first {
       width: 650px;
     }
@@ -32,4 +35,17 @@
     display: flex;
     flex-wrap: wrap;
    }
+
+  .photo__description-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .photo__description {
+    margin-left: 18px;
+  }
+
+  .photo__like {
+    margin-right: 36px;
+  }
 }
