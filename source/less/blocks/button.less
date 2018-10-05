@@ -1,0 +1,26 @@
+.button {
+  .text-uppercase();
+  .text-center();
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border: none;
+  color: @white;
+  background-color: @primary-color;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @hover-color;
+  }
+
+  &:active {
+    background-color: @active-color;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: @disabled-color;
+  }
+}

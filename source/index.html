@@ -3,37 +3,38 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
 
     <header class="page-header">
-      <div class="logo-section__wrapper">
-        <a class="page-header__logo">
-          <img class="page-header__logo-image" src="http://placehold.it/102x83" width="102" height="83" alt="Седона">
+      <div class="page-header__logo-wrapper">
+        <a class="page-header__logo-link" href="">
+          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона">
         </a>
       </div>
 
       <nav class="main-nav">
         <div class="main-nav__wrapper">
-          <button class="main-nav__button main-nav__button--close" type="button">Закрыть меню</button>
+          <button class="button main-nav__button main-nav__button--close" type="button"><span class="visually-hidden">Закрыть</span></button>
           <ul class="main-nav__list nav-list">
             <li class="nav-list__item nav-list__item--active">
-              <a>Главная</a>
+              <a class="nav-list__link">Главная</a>
             </li>
             <li class="nav-list__item">
-              <a href="photo.html">Фото и видео</a>
+              <a class="nav-list__link" href="photo.html">Фото и видео</a>
             </li>
             <li class="nav-list__item">
-              <a href="form.html">Форма отзыва</a>
+              <a class="nav-list__link" href="form.html">Форма отзыва</a>
             </li>
             <li class="nav-list__item">
-              <a href="#">HTML Academy</a>
+              <a class="nav-list__link" href="#">HTML Academy</a>
             </li>
           </ul>
         </div>
       </nav>
 
-      <div class="intro__header">
+      <div class="page-header__intro">
         <p class="visually-hidden">Welcome to the gorgeous</p>
         <h2 class="visually-hidden">Sedona</h2>
         <p class="visually-hidden">Because the Grand Canyon sucks!</p>
@@ -47,25 +48,25 @@
         <h3 class="page__subtitle">
           Седона - небольшой городок в Аризоне, заслуживающий большего!
         </h3>
-        <h2 class="page__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</h2>
+        <p class="page__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</p>
         <ul class="reasons__list">
           <li class="reasons__item reasons__item--one">
             <h3 class="reasons__title">Настоящий городок</h3>
             <p class="reasons__number">№ 1</p>
             <p class="reasons__description">Седона не атракцион для туристов, там течет своя жизнь</p>
-            <img class="reasons__image" src="http://placehold.it/320x260" width="320" height="260" alt="Дом">
-              <ul class="reason-list">
-                <li class="reason-item reason-item--house">
-                  <h4 class="reason-item-title">Жилье</h4>
-                  <p class="reason-item-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            <img class="reasons__image" src="img/main-city-mobile@1x.jpg" alt="Дом">
+              <ul class="features">
+                <li class="feature__item features__item--house">
+                  <h4 class="features__title">Жилье</h4>
+                  <p class="features__description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                 </li>
-                <li class="reason-item reason-item--souvenirs">
-                  <h4 class="reason-item-title">Сувениры</h4>
-                  <p class="reason-item-description">Не только китайского, но и местного производтсва</p>
+                <li class="features__item features__item--souvenirs">
+                  <h4 class="features__title">Сувениры</h4>
+                  <p class="features__description">Не только китайского, но и местного производтсва</p>
                 </li>
-                <li class="reason-item reason-item--food">
-                  <h4 class="reason-item-title">Еда</h4>
-                  <p class="reason-item-description">Всегда заказывайте фирменный бургер, вы не разочаруетесь</p>
+                <li class="features__item features__item--food">
+                  <h4 class="features__title">Еда</h4>
+                  <p class="features__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь</p>
                 </li>
               </ul>
           </li>
@@ -73,7 +74,7 @@
             <h3 class="reasons__title">Там есть мост дьявола</h3>
             <p class="reasons__number">№ 2</p>
             <p class="reasons__description">Да, по нему можно пройти! Если Вы осмелитесь, конечно</p>
-            <img class="reasons__image" src="http://placehold.it/320x260" width="320" height="260" alt="Мост дьявола">
+            <img class="reasons__image" src="img/main-bridge-mobile@1x.jpg" alt="Мост дьявола">
           </li>
           <li class="reasons__item reasons__item--three">
             <h3 class="reasons__title">Небольшая площадь</h3>
@@ -96,9 +97,9 @@
       <section class="order page__section">
         <h3 class="page__subtitle">Заинтересовались?</h3>
         <p class="page__text">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-        <a href="#" class="order__button">Найти гостиницу</a>
+        <a href="#" class="button order__button">Найти гостиницу</a>
         <div class="order__map">
-          <img class="visually-hidden" src="img/map.jpg" alt="Карта">
+          <img class="order__map-img" src="img/bg-map-mobile@1x.jpg" alt="Карта">
         </div>
       </section>
     </main>
@@ -119,8 +120,8 @@
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <b class="copyright__text page__subtitle">Разработано:</b>
+        <a class="copyright__button" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>
   </body>
