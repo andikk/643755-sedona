@@ -1,6 +1,5 @@
 .nav-list__item {
   .text-center();
-  background-color: @primary-color;
 }
 
 .nav-list__link {
@@ -17,4 +16,19 @@
   &:active {
     background-color: @active-color;
   }
+}
+
+@media (min-width: @tablet-width) {
+  .nav-list__link {
+    font-size: 14px;
+    color: @black;
+    background-color: @white;
+
+    &--ml {
+      margin-left: 16em;
+    }
+
+  }
+
+
 }
