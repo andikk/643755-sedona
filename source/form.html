@@ -2,6 +2,8 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Седона</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
@@ -25,7 +27,7 @@
               <a class="nav-list__link" href="photo.html">Фото и видео</a>
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link">Форма отзыва</a>
+              <a class="nav-list__link nav-list__link--ml">Форма отзыва</a>
             </li>
             <li class="nav-list__item">
               <a class="nav-list__link" href="#">HTML Academy</a>
@@ -43,8 +45,8 @@
       <section class="form page__section">
         <h3 class="page__subtitle">Оставь свой отзыв</h3>
         <p class="page__text">Помогите нашим отелям стать лучше! Оставь отзыв о них, а также о посещенных вами достопримечательностях</p>
-        <form id="form-review" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="form__section">
+        <form class="form__wrapper" id="form-review" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="form__section form__section--introduce">
             <legend class="page__subtitle form__section-title">Представьтесь:</legend>
             <ul class="form__list">
               <li class="form__item">
@@ -61,7 +63,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__section">
+          <fieldset class="form__section form__section--contacts">
             <legend class="page__subtitle form__section-title">Контактная информация:</legend>
             <ul class="form__list">
               <li class="form__item">
@@ -74,7 +76,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__section">
+          <fieldset class="form__section form__section--impression">
             <legend class="page__subtitle form__section-title">Ваше общее впечатление:</legend>
             <ul class="form__list">
               <li class="form__item">
@@ -91,7 +93,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__section">
+          <fieldset class="form__section form__section--sights">
             <legend class="page__subtitle form__section-title">Посещенные достопримечательности:</legend>
             <ul class="form__list">
               <li class="form__item">

@@ -19,18 +19,21 @@
   }
 
   &--three {
+    display: block;
     color: @dark-grey;
     background-color: @grey;
     border-bottom: 1px solid @border-color;
   }
 
   &--four {
+    display: block;
     color: @dark-grey;
     background-color: @grey;
     border-bottom: 1px solid @border-color;
   }
 
   &--five {
+    display: block;
     color: @dark-grey;
     background-color: @grey;
   }
@@ -43,4 +46,50 @@
 .reasons__image {
   width: 100%;
   display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .reasons__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .reasons__item {
+    &--one {
+      width: 100%;
+    }
+
+    &--two {
+      width: 100%;
+    }
+
+    &--three {
+      width: 33%;
+    }
+
+    &--four {
+      width: 33%;
+    }
+
+    &--five {
+      width: 33%;
+    }
+  }
+
+  .reasons__wrapper-item {
+    display: flex;
+  }
+
+  .reasons__text {
+    width: 33%;
+    &--right {
+      order: 1;
+    }
+  }
+
+  .reasons__image {
+    width: 67%;
+  }
+
 }
