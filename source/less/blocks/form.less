@@ -75,36 +75,41 @@
 }
 
 @media (min-width: @tablet-width) {
-  .form-wrapper {
+  .form__wrapper {
     display: flex;
+    flex-wrap: wrap;
   }
 
-  .form__section--impression, .form__section--introduce {
+  .form__section--impression,
+  .form__section--introduce {
     width: 50%;
   }
 
-  .form__section--contacts, .form__section--sights {
+  .form__section--contacts,
+  .form__section--sights,
+  .form__section--emotions {
     width: 100%;
   }
 
-  .form__section--sights {
-    order: 1;
-  }
+  .form__section {
+    &--impression {
+      order: 0;
+    }
 
-  .form__section--introduce {
-    order: 2;
-  }
+    &--introduce {
+      order: 1;
+    }
 
-  .form__section--contacts {
-    order: 3;
-  }
+    &--contacts {
+      order: 2;
+    }
 
-  .form__section--sights {
-    order: 4;
-  }
+    &--sights {
+      order: 3;
+    }
 
-  .form__section--emotions {
-    order: 5;
+    &--emotions {
+      order: 4;
+    }
   }
-
 }
