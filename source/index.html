@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <title>HTML Academy: Седона</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="page__container">
     <header class="page-header">
       <div class="page-header__logo-wrapper">
         <a class="page-header__logo-link" href="">
@@ -25,7 +27,7 @@
               <a class="nav-list__link" href="photo.html">Фото и видео</a>
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link" href="form.html">Форма отзыва</a>
+              <a class="nav-list__link nav-list__link--ml" href="form.html">Форма отзыва</a>
             </li>
             <li class="nav-list__item">
               <a class="nav-list__link" href="#">HTML Academy</a>
@@ -33,13 +35,13 @@
           </ul>
         </div>
       </nav>
-
       <div class="page-header__intro">
         <p class="visually-hidden">Welcome to the gorgeous</p>
         <h2 class="visually-hidden">Sedona</h2>
         <p class="visually-hidden">Because the Grand Canyon sucks!</p>
       </div>
     </header>
+
 
     <main class="page-main">
       <h1 class="visually-hidden">Sedona</h1>
@@ -51,30 +53,38 @@
         <p class="page__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</p>
         <ul class="reasons__list">
           <li class="reasons__item reasons__item--one">
-            <h3 class="reasons__title">Настоящий городок</h3>
-            <p class="reasons__number">№ 1</p>
-            <p class="reasons__description">Седона не атракцион для туристов, там течет своя жизнь</p>
-            <img class="reasons__image" src="img/main-city-mobile@1x.jpg" alt="Дом">
-              <ul class="features">
-                <li class="feature__item features__item--house">
-                  <h4 class="features__title">Жилье</h4>
-                  <p class="features__description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-                </li>
-                <li class="features__item features__item--souvenirs">
-                  <h4 class="features__title">Сувениры</h4>
-                  <p class="features__description">Не только китайского, но и местного производтсва</p>
-                </li>
-                <li class="features__item features__item--food">
-                  <h4 class="features__title">Еда</h4>
-                  <p class="features__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь</p>
-                </li>
-              </ul>
+            <div class="reasons__wrapper-item">
+              <div class="reasons__text">
+                <h3 class="reasons__title">Настоящий городок</h3>
+                <p class="reasons__number">№ 1</p>
+                <p class="reasons__description">Седона не атракцион для туристов, там течет своя жизнь</p>
+              </div>
+              <div class="reasons__image-wrapper"><img class="reasons__image" src="img/main-city-mobile@1x.jpg" alt="Дом"></div>
+            </div>
+            <ul class="features">
+              <li class="features__item features__item--house">
+                <h4 class="features__title">Жилье</h4>
+                <p class="features__description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              </li>
+              <li class="features__item features__item--souvenirs">
+                <h4 class="features__title">Сувениры</h4>
+                <p class="features__description">Не только китайского, но и местного производтсва</p>
+              </li>
+              <li class="features__item features__item--food">
+                <h4 class="features__title">Еда</h4>
+                <p class="features__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь</p>
+              </li>
+            </ul>
           </li>
           <li class="reasons__item reasons__item--two">
-            <h3 class="reasons__title">Там есть мост дьявола</h3>
-            <p class="reasons__number">№ 2</p>
-            <p class="reasons__description">Да, по нему можно пройти! Если Вы осмелитесь, конечно</p>
-            <img class="reasons__image" src="img/main-bridge-mobile@1x.jpg" alt="Мост дьявола">
+            <div class="reasons__wrapper-item">
+              <div class="reasons__text reasons__text--right">
+                <h3 class="reasons__title">Там есть мост дьявола</h3>
+                <p class="reasons__number">№ 2</p>
+                <p class="reasons__description">Да, по нему можно пройти! Если Вы осмелитесь, конечно</p>
+              </div>
+              <div class="reasons__image-wrapper"><img class="reasons__image" src="img/main-bridge-mobile@1x.jpg" alt="Мост дьявола"></div>
+            </div>
           </li>
           <li class="reasons__item reasons__item--three">
             <h3 class="reasons__title">Небольшая площадь</h3>
@@ -105,7 +115,7 @@
     </main>
 
     <footer class="page-footer page__section">
-      <h3 class="page__subtitle">#VisitSedona</h3>
+      <div class="page-footer__title-wrapper"><h3 class="page__subtitle">#VisitSedona</h3></div>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
@@ -124,5 +134,6 @@
         <a class="copyright__button" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>
-  </body>
+  </div>
+</body>
 </html>

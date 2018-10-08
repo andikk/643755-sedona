@@ -8,3 +8,18 @@
   .text-uppercase();
   .text-center();
 }
+
+@media (min-width: @tablet-width) {
+  .page__container {
+    width: 768px;
+    .block-center();
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page__container {
+    width: 1200px;
+    .block-center();
+    box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
+  }
+}

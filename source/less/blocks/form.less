@@ -3,6 +3,7 @@
   padding: 0 0;
   border: none;
   border-bottom: 1px solid @border-color;
+  display: block;
 }
 
 .form__list {
@@ -71,4 +72,44 @@
 
 .form__button {
   width: 25%;
+}
+
+@media (min-width: @tablet-width) {
+  .form__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__section--impression,
+  .form__section--introduce {
+    width: 50%;
+  }
+
+  .form__section--contacts,
+  .form__section--sights,
+  .form__section--emotions {
+    width: 100%;
+  }
+
+  .form__section {
+    &--impression {
+      order: 0;
+    }
+
+    &--introduce {
+      order: 1;
+    }
+
+    &--contacts {
+      order: 2;
+    }
+
+    &--sights {
+      order: 3;
+    }
+
+    &--emotions {
+      order: 4;
+    }
+  }
 }
