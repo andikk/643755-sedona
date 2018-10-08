@@ -1,46 +1,44 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="format-detection" content="telephone=no">
-    <title>HTML Academy: Седона</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-
-    <header class="page-header">
-      <div class="page-header__logo-wrapper">
-        <a class="page-header__logo-link" href="">
-          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона">
-        </a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <title>HTML Academy: Седона</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="page-header__logo-wrapper">
+      <a class="page-header__logo-link" href="">
+        <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона">
+      </a>
+    </div>
+    <nav class="main-nav">
+      <div class="main-nav__wrapper">
+        <button class="button main-nav__button main-nav__button--close" type="button"><span class="visually-hidden">Закрыть</span></button>
+        <ul class="main-nav__list nav-list">
+          <li class="nav-list__item nav-list__item--active">
+            <a class="nav-list__link" href="index.html">Главная</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link">Фото и видео</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link nav-list__link--ml" href="form.html">Форма отзыва</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">HTML Academy</a>
+          </li>
+        </ul>
       </div>
+    </nav>
+    <div class="page-header__intro page-header__intro--other">
+      <h2 class="visually-hidden">Sedona</h2>
+    </div>
+  </header>
 
-      <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <button class="button main-nav__button main-nav__button--close" type="button"><span class="visually-hidden">Закрыть</span></button>
-          <ul class="main-nav__list nav-list">
-            <li class="nav-list__item nav-list__item--active">
-              <a class="nav-list__link" href="index.html">Главная</a>
-            </li>
-            <li class="nav-list__item">
-              <a class="nav-list__link">Фото и видео</a>
-            </li>
-            <li class="nav-list__item">
-              <a class="nav-list__link nav-list__link--ml" href="form.html">Форма отзыва</a>
-            </li>
-            <li class="nav-list__item">
-              <a class="nav-list__link" href="#">HTML Academy</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      <div class="page-header__intro page-header__intro--other">
-        <h2 class="visually-hidden">Sedona</h2>
-      </div>
-    </header>
-
+  <div class="page__container">
     <main class="page-main">
       <section class="photo page__section">
         <h3 class="page__subtitle">Фото и видео</h3>
@@ -127,5 +125,6 @@
         <a class="copyright__button" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>
-  </body>
+  </div>
+</body>
 </html>
