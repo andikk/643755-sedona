@@ -1,6 +1,8 @@
 .main-nav {
   display: block;
   order: -1;
+  width: 100%;
+  background: @white;
 }
 
 .main-nav__wrapper {
@@ -30,8 +32,9 @@
 @media (min-width: @tablet-width) {
   .main-nav {
     order: 0;
-    width: 695px;
-    .block-center()
+    padding-left: 30px;
+    padding-right: 30px;
+
   }
 
   .main-nav__button {
@@ -48,6 +51,6 @@
 
 @media (min-width: @desktop-width) {
   .main-nav {
-    width: 1040px;
+
   }
 }
