@@ -32,53 +32,45 @@
 
   .main-nav--closed .main-nav__button::before {
     content: "";
-
-  position: absolute;
-  top: 11px;
-  left: -42px;
-
-  width: 36px;
-  height: 2px;
-
-  background-color: @primary-color;
-  box-shadow: 0 8px 0 0 @primary-color, 0 16px 0 0 @primary-color;
+    position: absolute;
+    top: 11px;
+    left: -42px;
+    width: 36px;
+    height: 2px;
+    background-color: @primary-color;
+    box-shadow: 0 8px 0 0 @primary-color, 0 16px 0 0 @primary-color;
     z-index: 40;
   }
 
   .main-nav--opened .main-nav__list {
     display: block;
-
   }
 
 
-.main-nav--opened .main-nav__button {
-     &::before,
-     &::after {
-    content: "";
+  .main-nav--opened .main-nav__button {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 24px;
+      left: -43px;
+      width: 36px;
+      height: 2px;
+      background-color: @white;
+      z-index: 30;
+    }
 
-    position: absolute;
-    top: 24px;
-    left: -43px;
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
 
-    width: 36px;
-    height: 2px;
-
-    background-color: @white;
-    z-index: 30;
+    &::after {
+      transform: rotate(-45deg);
+    }
   }
-
-  &::before {
-    transform: rotate(45deg);
-    box-shadow: none;
-  }
-
-  &::after {
-    transform: rotate(-45deg);
-  }
-
-  }
-
 }
+
 
 @media (min-width: @tablet-width) {
   .main-nav {
