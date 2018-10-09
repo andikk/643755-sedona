@@ -10,7 +10,7 @@
 <body>
   <div class="page__container">
     <header class="page-header">
-      <nav class="main-nav main-nav--closed">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrapper">
           <ul class="main-nav__list nav-list">
             <li class="nav-list__item nav-list__item--active">
@@ -46,17 +46,17 @@
       <h1 class="visually-hidden">Sedona</h1>
       <section class="reasons page__section">
         <h2 class="visually-hidden">Причины по которым стоит посетить Седону</h2>
-        <h3 class="page__subtitle">
+        <h3 class="reasons__subtitle page__subtitle">
           Седона - небольшой городок в Аризоне, заслуживающий большего!
         </h3>
-        <p class="page__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</p>
+        <p class="reasons__subtext page__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</p>
         <ul class="reasons__list">
           <li class="reasons__item reasons__item--one">
             <div class="reasons__wrapper-item">
-              <div class="reasons__text">
+              <div class="reasons__text reasons__text--one">
                 <h3 class="reasons__title">Настоящий городок</h3>
-                <p class="reasons__number">№ 1</p>
-                <p class="reasons__description">Седона не атракцион для туристов, там течет своя жизнь</p>
+                <p class="reasons__number page__text">№ 1</p>
+                <p class="reasons__description page__text ">Седона не атракцион для туристов, <br> там течет своя жизнь</p>
               </div>
               <div class="reasons__image-wrapper"><img class="reasons__image" src="img/main-city-mobile@1x.jpg" alt="Дом"></div>
             </div>
@@ -77,10 +77,10 @@
           </li>
           <li class="reasons__item reasons__item--two">
             <div class="reasons__wrapper-item">
-              <div class="reasons__text reasons__text--right">
-                <h3 class="reasons__title">Там есть мост дьявола</h3>
-                <p class="reasons__number">№ 2</p>
-                <p class="reasons__description">Да, по нему можно пройти! Если Вы осмелитесь, конечно</p>
+              <div class="reasons__text reasons__text--two">
+                <h3 class="reasons__title reasons__title--two">Там есть мост дьявола</h3>
+                <p class="reasons__number page__text">№ 2</p>
+                <p class="reasons__description page__text">Да, по нему можно пройти! Если Вы осмелитесь, конечно</p>
               </div>
               <div class="reasons__image-wrapper"><img class="reasons__image" src="img/main-bridge-mobile@1x.jpg" alt="Мост дьявола"></div>
             </div>
@@ -138,7 +138,7 @@
 <script>
   var navMain = document.querySelector('.main-nav');
   var navToggle = document.querySelector('.main-nav__button');
-
+  navMain.classList.remove('main-nav--nojs');
   navToggle.addEventListener('click', function() {
     if (navMain.classList.contains('main-nav--closed')) {
       navMain.classList.remove('main-nav--closed');

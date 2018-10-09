@@ -36,10 +36,10 @@
   .main-nav--closed .main-nav__button::before {
     content: "";
     position: absolute;
-    top: 11px;
+    top: 17px;
     left: 5px;
-    width: 36px;
-    height: 2px;
+    width: 23px;
+    height: 3px;
     background-color: @primary-color;
     box-shadow: 0 8px 0 0 @primary-color, 0 16px 0 0 @primary-color;
     z-index: 40;
@@ -55,10 +55,10 @@
     &::after {
       content: "";
       position: absolute;
-      top: 24px;
+      top: 26px;
       left: 5px;
-      width: 36px;
-      height: 2px;
+      width: 23px;
+      height: 3px;
       background-color: @white;
       z-index: 30;
     }
@@ -71,6 +71,14 @@
     &::after {
       transform: rotate(-45deg);
     }
+  }
+
+  .main-nav--nojs .main-nav__button {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    display: block;
   }
 }
 
