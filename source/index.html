@@ -10,15 +10,8 @@
 <body>
   <div class="page__container">
     <header class="page-header">
-      <div class="page-header__logo-wrapper">
-        <a class="page-header__logo-link" href="">
-          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона">
-        </a>
-      </div>
-
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed">
         <div class="main-nav__wrapper">
-          <button class="button main-nav__button main-nav__button--close" type="button"><span class="visually-hidden">Закрыть</span></button>
           <ul class="main-nav__list nav-list">
             <li class="nav-list__item nav-list__item--active">
               <a class="nav-list__link">Главная</a>
@@ -33,6 +26,12 @@
               <a class="nav-list__link" href="#">HTML Academy</a>
             </li>
           </ul>
+          <div class="page-header__logo-wrapper">
+            <a class="page-header__logo-link">
+              <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона">
+            </a>
+          </div>
+          <button class="main-nav__button" type="button"><span class="visually-hidden">Меню</span></button>
         </div>
       </nav>
       <div class="page-header__intro">

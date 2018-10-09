@@ -1,6 +1,5 @@
 .main-nav {
   display: block;
-  order: -1;
   width: 100%;
   background: @white;
 }
@@ -10,16 +9,18 @@
 }
 
 .main-nav__button {
-  &--close {
-    background-image: url("../img/icon-cross.svg");
-    background-repeat: no-repeat;
-    color: @white;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 23px;
-    height: 22px;
-  }
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-top: 10px;
+
+
+
+  //border: none;
+  //background-color: @white;
+  //rect {
+  //  fill: @primary-color;
+  //}
 }
 
 .main-nav__list {
@@ -29,12 +30,38 @@
 }
 
 
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--closed .main-nav__button::before {
+  content: "";
+
+  position: absolute;
+  top: 15px;
+  left: 17px;
+
+  width: 36px;
+  height: 2px;
+
+  background-color: #ffffff;
+  box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+  }
+
+
+ .main-nav--opened .main-nav__list {
+    display: block;
+ }
+
+}
+
+
+
 @media (min-width: @tablet-width) {
   .main-nav {
-    order: 0;
     padding-left: 30px;
     padding-right: 30px;
-
   }
 
   .main-nav__button {
@@ -46,11 +73,5 @@
     justify-content: space-between;
     background-color: @white;
     color: @black;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-nav {
-
   }
 }
