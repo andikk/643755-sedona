@@ -1,12 +1,36 @@
+.video__text {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
 .video__file-img {
   width: 100%;
 }
 
+@media (min-width: @tablet-width) {
+  .video__title {
+    margin-bottom: 10px;
+  }
 
-@media (min-width: @desktop-width) {
+  .video__text {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+
   .video__file {
-    width: 800px;
+    width: 648px;
     margin-right: auto;
     margin-left: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video__text {
+    padding-left: 390px;
+    padding-right: 390px;
+  }
+  .video__file {
+    width: 800px;
   }
 }
