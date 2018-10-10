@@ -41,8 +41,6 @@
   margin-top: -10px;
 }
 
-
-
 .features__icon {
   path, rect, polygon, circle {
     fill: @primary-color;
@@ -55,8 +53,32 @@
     display: flex;
   }
 
+  .features__item--gift {
+    order: 1;
+  }
+
   .features__item {
     width: 33%;
     text-align: center;
+    flex-direction: column;
+  }
+
+  .features__title {
+    font-size: 21px;
+  }
+
+  .features__description {
+    font-size: 14px;
+    line-height: 21px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .features__icon-block {
+    margin: 0;
+  }
+
+  .features__text-block {
+    padding: 0;
   }
 }
