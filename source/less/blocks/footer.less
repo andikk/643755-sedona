@@ -1,0 +1,32 @@
+.footer__title {
+  font-size: 21px;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: @tablet-width) {
+  .footer {
+    width: 650px;
+    .block-center();
+    display: flex;
+  }
+
+  .footer__title-wrapper,
+  .footer__social,
+  .footer__copyright {
+    width: 33%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer {
+    width: 965px;
+  }
+}
+
+
+
+
