@@ -75,7 +75,7 @@
 
   &:focus {
     background-color: @white;
-    border: solid 4px #e5e5e5;
+    border: solid 4px @disabled-color;
   }
 
   &--name {
@@ -96,6 +96,18 @@
   &--tel {
     margin-top: 4px;
     margin-bottom: 10px;
+    position: relative;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 58px;
+      height: 58px;
+      background-color: #000;
+      //background: url("../img/icon-phone.svg");
+    }
   }
 
   &--e-mail {
