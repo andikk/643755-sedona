@@ -1,18 +1,26 @@
 .page__subtitle {
-  .text-uppercase();
-  .text-center();
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
   font-weight: bold;
 }
 
 .page__text {
-  .text-uppercase();
-  .text-center();
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.71;
 }
 
 @media (min-width: @tablet-width) {
   .page__container {
     width: 768px;
     .block-center();
+  }
+
+  .page__subtitle {
+    font-size: 30px;
+    line-height: 1.86;
   }
 }
 

@@ -1,0 +1,22 @@
+.footer__title {
+  font-size: 21px;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: @tablet-width) {
+  .footer {
+    .block-center();
+    display: flex;
+    align-items: center;
+  }
+
+  .footer__title-wrapper,
+  .footer__social,
+  .footer__copyright {
+    width: 33%;
+  }
+}

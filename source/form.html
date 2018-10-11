@@ -9,15 +9,9 @@
 </head>
 <body>
   <div class="page__container">
-    <header class="page-header">
-      <div class="page-header__logo-wrapper">
-        <a class="page-header__logo-link" href="">
-          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона">
-        </a>
-      </div>
-      <nav class="main-nav">
+    <header class="header">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrapper">
-          <button class="button main-nav__button main-nav__button--close" type="button"><span class="visually-hidden">Закрыть</span></button>
           <ul class="main-nav__list nav-list">
             <li class="nav-list__item nav-list__item--active">
               <a class="nav-list__link" href="index.html">Главная</a>
@@ -32,46 +26,52 @@
               <a class="nav-list__link" href="#">HTML Academy</a>
             </li>
           </ul>
+          <div class="header__logo-wrapper">
+            <a class="header__logo-link">
+              <img class="header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона">
+            </a>
+          </div>
+          <button class="main-nav__button" type="button"><span class="visually-hidden">Меню</span></button>
         </div>
       </nav>
-      <div class="page-header__intro page-header__intro--other">
+      <div class="header__intro header__intro--other">
         <h2 class="visually-hidden">Sedona</h2>
       </div>
     </header>
 
     <main class="page-main">
-      <section class="form page__section">
-        <h3 class="page__subtitle">Оставь свой отзыв</h3>
-        <p class="page__text">Помогите нашим отелям стать лучше! Оставь отзыв о них, а также о посещенных вами достопримечательностях</p>
+      <section class="form">
+        <h3 class="form__title page__subtitle">Оставь свой отзыв</h3>
+        <p class="form__text page__text">Помогите нашим отелям стать лучше! Оставь отзыв о них, а также о посещенных вами достопримечательностях</p>
         <form id="form-review" action="https://echo.htmlacademy.ru" method="post">
           <div class="form__wrapper">
             <fieldset class="form__section form__section--introduce">
-              <legend class="page__subtitle form__section-title">Представьтесь:</legend>
+              <legend class="form__section-title page__subtitle">Представьтесь:</legend>
               <ul class="form__list">
                 <li class="form__item">
                   <label class="form__label" for="first-name">Имя<sup>*</sup>:</label>
-                  <input class="form__input" type="text" name="first-name" id="first-name" placeholder="Петр">
+                  <input class="form__input form__input--name" type="text" name="first-name" id="first-name" placeholder="Петр">
                 </li>
                 <li class="form__item">
                   <label class="form__label" for="second-name">Фамилия<sup>*</sup>:</label>
-                  <input class="form__input" type="text" name="second-name" id="second-name" placeholder="Иванов">
+                  <input class="form__input form__input--second-name" type="text" name="second-name" id="second-name" placeholder="Иванов">
                 </li>
                 <li class="form__item">
                   <label class="form__label" for="middle-name">Отчество:</label>
-                  <input  class="form__input" type="text" name="middle-name" id="middle-name" placeholder="Александрович">
+                  <input  class="form__input form__input--middle-name" type="text" name="middle-name" id="middle-name" placeholder="Александрович">
                 </li>
               </ul>
             </fieldset>
             <fieldset class="form__section form__section--contacts">
-              <legend class="page__subtitle form__section-title">Контактная информация:</legend>
+              <legend class="form__section-title page__subtitle">Контактная информация:</legend>
               <ul class="form__list">
                 <li class="form__item">
                   <label class="form__label form__label--contact" for="tel">Контактный телефон<sup>*</sup>:</label>
-                  <input class="form__input" type="tel" name="tel" id="tel" placeholder="Введите телефон">
+                  <input class="form__input form__input--tel" type="tel" name="tel" id="tel" placeholder="Введите телефон">
                 </li>
                 <li class="form__item">
                   <label class="form__label form__label--contact" for="e-mail">Электронная почта<sup>*</sup>:</label>
-                  <input class="form__input" type="email" name="e-mail" id="e-mail" placeholder="Введите e-mail">
+                  <input class="form__input form__input--e-mail" type="email" name="e-mail" id="e-mail" placeholder="Введите e-mail">
                 </li>
               </ul>
             </fieldset>
@@ -101,7 +101,7 @@
                 </li>
                 <li class="form__item">
                   <input class="form__checkbox form__checkbox--checked visually-hidden" type="checkbox" name="mount-bell" id="mount-bell" checked>
-                  <label class="form__control-label" for="mount-bell">Гора Колокол</label>
+                  <label class="form__control-label page" for="mount-bell">Гора Колокол</label>
                 </li>
                 <li class="form__item">
                   <input class="form__checkbox form__checkbox--checked visually-hidden" type="checkbox" name="slide-park" id="slide-park" checked>
@@ -116,7 +116,7 @@
             <fieldset class="form__section form__section--emotions">
               <legend class="page__subtitle form__section-title">Опишите свои эмоции:</legend>
               <label class="visually-hidden" for="message">Ваше сообщение</label>
-              <textarea name="form__message" id="message" required>Опишите подробно все свои восторги</textarea>
+              <textarea class="form__message" name="form__message" id="message" required>Опишите подробно все свои восторги</textarea>
             </fieldset>
           </div>
           <input type="submit" class="button form__button" name="button-send" id="button-send" value="Отправить отзыв">
@@ -124,26 +124,29 @@
       </section>
     </main>
 
-    <footer class="page-footer page__section">
-      <div class="page-footer__title-wrapper"><h3 class="page__subtitle">#VisitSedona</h3></div>
-      <div class="page-footer__social social">
+    <footer class="footer">
+      <div class="footer__title-wrapper">
+        <h3 class="footer__title page__subtitle">#VisitSedona</h3>
+      </div>
+      <div class="footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="#">Мы в твиттере</a>
+            <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в твиттере</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
+            <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="#">Мы в Ютубе</a>
+            <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Мы в Ютубе</span></a>
           </li>
         </ul>
       </div>
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text page__subtitle">Разработано:</b>
-        <a class="copyright__button" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <div class="footer__copyright copyright">
+        <p class="copyright__text page__text">Разработано:</p>
+        <a class="copyright__button" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
       </div>
     </footer>
   </div>
+  <script src="js/script.js"></script>
 </body>
 </html>

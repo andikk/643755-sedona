@@ -1,7 +1,40 @@
+.order {
+  padding-top: 10px;
+}
+
 .order__button {
-  width: 25%;
+  width: 280px;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.24;
+  margin-bottom: 50px;
 }
 
 .order__map-img {
   width: 100%;
+}
+
+.order__title {
+  font-size: 21px;
+}
+
+.order__text {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .order__title {
+    font-size: 30px;
+  }
+
+  .order__text {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .order__button {
+    width: 458px;
+  }
 }
