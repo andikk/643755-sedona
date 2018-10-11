@@ -13,7 +13,6 @@
   &--contacts {
     padding-bottom: 20px;
   }
-
 }
 
 .form__title {
@@ -109,6 +108,7 @@
 }
 
 .form__control-label {
+  font-size: 18px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -118,21 +118,27 @@
   color: @black;
 }
 
-
 .form__message {
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
+  margin-left: 20px;
+  height: 160px;
+  width: 279px;
+  font-size: 18px;
   line-height: 1.44;
-  letter-spacing: normal;
+  font-weight: bold;
   text-align: left;
   color: @black;
-  background-color: @grey;
+  background-color: @input-color;
+  padding-top: 15px;
+  padding-left: 15px;
+  border: none;
 }
 
 .form__button {
   margin-top: 20px;
   width: 280px;
+  height: 58px;
+  font-size: 21px;
+  font-weight: bold;
 }
 
 @media (min-width: @tablet-width) {

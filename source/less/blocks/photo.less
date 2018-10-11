@@ -28,6 +28,25 @@
  margin-top: 0;
 }
 
+.photo__like {
+  font-size: 14;
+  font-weight: bold;
+  padding-left: 30px;
+  position: relative;
+}
+
+.photo__like:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 23px;
+  height: 21px;
+  background: url("../img/icon-like.svg");
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
 .photo__picture {
   display: block;
   width: 100%;
