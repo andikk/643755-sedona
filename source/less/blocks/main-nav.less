@@ -22,17 +22,13 @@
 }
 
 .main-nav__list {
-
   .list-unstyled();
   background-color: @primary-color;
   color: @white;
-
 }
 
 
-
-
-@media (min-width: @mobile-width) and (max-width: @tablet-width) {
+@media (min-width: @mobile-width) and (max-width: 767px) {
   .main-nav--closed .main-nav__list {
     display: none;
   }
@@ -86,8 +82,6 @@
 }
 
 
-
-
 @media (min-width: @tablet-width) {
   .main-nav {
     padding-left: 30px;
@@ -105,8 +99,6 @@
     color: @black;
   }
 }
-
-
 
 @media (min-width: @desktop-width) {
   .main-nav {
