@@ -97,7 +97,6 @@
   padding-left: 15px;
   margin-top: 15px;
   height: 58px;
-  font-family: "PT Sans", "Tahoma", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
@@ -148,7 +147,6 @@
 .form__section--emotions {
   border-bottom: none;
 }
-
 
 .form__control-label {
   padding-left: 75px;
@@ -208,8 +206,6 @@
   }
 }
 
-
-
 .form__checkbox + .form__control-label:before {
   content: "";
   position: absolute;
@@ -233,7 +229,6 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-
 
 .form__message {
   margin-left: 20px;
@@ -259,14 +254,56 @@
 }
 
 @media (min-width: @tablet-width) {
+  .form {
+    width: 728px;
+    .block-center();
+  }
+
+  .form__section {
+    border: none;
+  }
+
   .form__wrapper {
     display: flex;
     flex-wrap: wrap;
+    border: none;
+  }
+
+  .form__text {
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+
+  .form__section-title {
+    font-size: 21px;
+    line-height: 1.24;
+  }
+
+  .form__section--contacts .form__input {
+    width: 590px;
+  }
+
+  .form__section--contacts .form__item {
+    margin-bottom: 30px;
+  }
+
+
+  .form__section--impression .form__section-title {
+    margin-bottom: 40px;
+  }
+
+  .form__section--introduce .form__section-title {
+    margin-bottom: 20px;
   }
 
   .form__section--impression,
   .form__section--introduce {
     width: 50%;
+  }
+
+  .form__section--sights .form__section-title {
+    padding-left: 160px;
+    padding-right: 160px;
   }
 
   .form__section--contacts,
@@ -282,6 +319,7 @@
 
     &--introduce {
       order: 1;
+      border-left: 1px solid @border-color;
     }
 
     &--contacts {
@@ -296,4 +334,10 @@
       order: 4;
     }
   }
+
+
+
 }
+
+
+
