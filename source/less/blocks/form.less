@@ -259,10 +259,6 @@
     .block-center();
   }
 
-  .form__section {
-    border: none;
-  }
-
   .form__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -313,13 +309,24 @@
   }
 
   .form__section {
+    border: none;
+
     &--impression {
       order: 0;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        width: 1px;
+        height: 292px;
+        background-color: @input-color;
+      }
     }
 
     &--introduce {
       order: 1;
-      border-left: 1px solid @border-color;
     }
 
     &--contacts {
