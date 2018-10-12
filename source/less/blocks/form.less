@@ -34,11 +34,16 @@
 }
 
 .form__item {
+  position: relative;
   padding-left: 16px;
   padding-right: 16px;
   text-align: left;
 
   &--radio {
+    margin-bottom: 40px;
+  }
+
+  &--checkbox {
     margin-bottom: 40px;
   }
 }
@@ -144,8 +149,8 @@
   border-bottom: none;
 }
 
+
 .form__control-label {
-  position: relative;
   padding-left: 75px;
   cursor: pointer;
   font-size: 18px;
@@ -155,39 +160,63 @@
   line-height: 1.44;
   letter-spacing: normal;
   text-align: left;
-  color: @black;
 }
 
-.form__radio-control + .form__control-label:before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 5px;
-  width: 46px;
-  height: 46px;
-  background-color: @input-color;
-  border-radius: 50%;
+.form__radio-control + .form__control-label  {
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0px;
+    width: 56px;
+    height: 56px;
+    background-color: @body-color;
+    border-radius: 50%;
+  }
 }
 
-.form__radio-control:checked + .form__control-label:before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 5px;
-  width: 46px;
-  height: 46px;
-  background-color: @black;
-  border-radius: 50%;
+.form__radio-control:checked + .form__control-label  {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 17px;
+    width: 22px;
+    height: 22px;
+    background-color: @dark-grey;
+    border-radius: 50%;
+  }
 }
+
+.form__radio-control:focus + .form__control-label,
+.form__item--radio:hover .form__control-label {
+  &::before {
+    background-color: @disabled-color;
+  }
+}
+
+.form__item--radio:active .form__control-label {
+  &::before {
+    background-color: @radio-active-color;
+  }
+
+  &::after {
+    background-color: rgba(51, 51, 51, 0.3);
+  }
+}
+
 
 
 .form__checkbox + .form__control-label:before {
   content: "";
   position: absolute;
   top: 0px;
-  left: 5px;
-  width: 46px;
-  height: 46px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
   background-color: @input-color;
   border-radius: 5px;
 }
@@ -195,15 +224,15 @@
 .form__checkbox:checked + .form__control-label:before {
   content: "";
   position: absolute;
-  top: 0px;
-  left: 5px;
-  width: 46px;
-  height: 46px;
-  background-color: @black;
+  top: 0;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: @input-color;
   background: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
+  background-position: center;
 }
-
 
 
 .form__message {
