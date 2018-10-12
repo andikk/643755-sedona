@@ -30,13 +30,49 @@
  }
 
 .form__list {
-  .list-unstyled()
+  .list-unstyled();
 }
 
 .form__item {
   padding-left: 16px;
   padding-right: 16px;
   text-align: left;
+
+  &--radio {
+    margin-bottom: 40px;
+  }
+}
+
+.form__input-icon {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: -58px;
+    width: 58px;
+    height: 58px;
+  }
+
+  &--tel {
+    &:after {
+      background: url("../img/icon-phone.svg");
+    }
+  }
+
+  &--e-mail {
+    &:after {
+      background-image: url("../img/icon-mail.svg");
+    }
+  }
+
+  &:after {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: @input-icon-background-color;
+  }
+
 }
 
 .form__label {
@@ -97,17 +133,6 @@
     margin-top: 4px;
     margin-bottom: 10px;
     position: relative;
-
-    &:after {
-      content: " ";
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      width: 58px;
-      height: 58px;
-      background-color: #000;
-      //background: url("../img/icon-phone.svg");
-    }
   }
 
   &--e-mail {
@@ -120,6 +145,9 @@
 }
 
 .form__control-label {
+  position: relative;
+  padding-left: 75px;
+  cursor: pointer;
   font-size: 18px;
   font-weight: bold;
   font-style: normal;
@@ -129,6 +157,54 @@
   text-align: left;
   color: @black;
 }
+
+.form__radio-control + .form__control-label:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  width: 46px;
+  height: 46px;
+  background-color: @input-color;
+  border-radius: 50%;
+}
+
+.form__radio-control:checked + .form__control-label:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  width: 46px;
+  height: 46px;
+  background-color: @black;
+  border-radius: 50%;
+}
+
+
+.form__checkbox + .form__control-label:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  width: 46px;
+  height: 46px;
+  background-color: @input-color;
+  border-radius: 5px;
+}
+
+.form__checkbox:checked + .form__control-label:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  width: 46px;
+  height: 46px;
+  background-color: @black;
+  background: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+}
+
+
 
 .form__message {
   margin-left: 20px;

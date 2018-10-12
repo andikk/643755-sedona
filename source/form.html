@@ -27,7 +27,7 @@
             </li>
           </ul>
           <div class="header__logo-wrapper">
-            <a class="header__logo-link">
+            <a class="header__logo-link" href="index.html">
               <img class="header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона">
             </a>
           </div>
@@ -67,28 +67,32 @@
               <ul class="form__list">
                 <li class="form__item">
                   <label class="form__label form__label--contact" for="tel">Контактный телефон<sup>*</sup>:</label>
-                  <input class="form__input form__input--tel" type="tel" name="tel" id="tel" placeholder="Введите телефон">
+                  <span class="form__input-icon form__input-icon--tel">
+                    <input class="form__input" type="tel" name="tel" id="tel" placeholder="Введите телефон">
+                  </span>
                 </li>
                 <li class="form__item">
                   <label class="form__label form__label--contact" for="e-mail">Электронная почта<sup>*</sup>:</label>
-                  <input class="form__input form__input--e-mail" type="email" name="e-mail" id="e-mail" placeholder="Введите e-mail">
+                  <span class="form__input-icon form__input-icon--e-mail">
+                    <input class="form__input form__input--e-mail" type="email" name="e-mail" id="e-mail" placeholder="Введите e-mail">
+                  </span>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="form__section form__section--impression">
               <legend class="page__subtitle form__section-title">Ваше общее впечатление:</legend>
               <ul class="form__list">
-                <li class="form__item">
+                <li class="form__item form__item--radio">
                   <input class="form__radio-control form__radio-control--checked visually-hidden" type="radio" name="impression" id="positive" value="positive" checked>
                   <label class="form__control-label" for="positive">Сокрее положительное</label>
                 </li>
-                <li class="form__item">
+                <li class="form__item form__item--radio">
                   <input class="form__radio-control visually-hidden" type="radio" name="impression" id="negative" value="negative">
                   <label class="form__control-label" for="negative">Сокрее отрицательное</label>
                 </li>
-                <li class="form__item">
+                <li class="form__item form__item--radio">
                   <input class="form__radio-control visually-hidden" type="radio" name="impression" id="no-idea" value="no-idea">
-                  <label class="form__control-label" for="negative">Затрудняюсь ответить</label>
+                  <label class="form__control-label" for="no-idea">Затрудняюсь ответить</label>
                 </li>
               </ul>
             </fieldset>
