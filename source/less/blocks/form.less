@@ -3,6 +3,10 @@
   border-top: 1px solid @border-color;
 }
 
+.form__remark {
+  display: none;
+}
+
 .form__section {
   margin: 0 0;
   padding: 0 0;
@@ -92,7 +96,6 @@
   }
 }
 
-
 .form__input {
   padding-left: 15px;
   margin-top: 15px;
@@ -164,7 +167,7 @@
   position: relative;
   cursor: pointer;
 
-  &::before {
+  &:before {
     content: "";
     position: absolute;
     top: -15px;
@@ -177,7 +180,7 @@
 }
 
 .form__radio-control:checked + .form__control-label  {
-  &::after {
+  &:after {
     content: "";
     position: absolute;
     top: 2px;
@@ -191,17 +194,17 @@
 
 .form__radio-control:focus + .form__control-label,
 .form__item--radio:hover .form__control-label {
-  &::before {
+  &:before {
     background-color: @disabled-color;
   }
 }
 
 .form__item--radio:active .form__control-label {
-  &::before {
+  &:before {
     background-color: @radio-active-color;
   }
 
-  &::after {
+  &:after {
     background-color: rgba(51, 51, 51, 0.3);
   }
 }
@@ -259,6 +262,10 @@
     .block-center();
   }
 
+  .form__remark {
+    display: block;
+  }
+
   .form__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -282,7 +289,6 @@
   .form__section--contacts .form__item {
     margin-bottom: 30px;
   }
-
 
   .form__section--impression .form__section-title {
     margin-bottom: 40px;
@@ -308,12 +314,17 @@
     width: 100%;
   }
 
+  .form__item--checkbox {
+    width: 350px;
+  }
+
   .form__section {
     border: none;
+    position: relative;
 
     &--impression {
       order: 0;
-      position: relative;
+
       &:after {
         content: "";
         position: absolute;
@@ -331,18 +342,77 @@
 
     &--contacts {
       order: 2;
+
+      & .form__section-title:before {
+        content: "";
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        width: 120px;
+        height: 1px;
+        background-color: @input-color;
+      }
+
+      & .form__section-title:after {
+        content: "";
+        position: absolute;
+        top: 30px;
+        right: 68px;
+        width: 100px;
+        height: 1px;
+        background-color: @input-color;
+      }
     }
 
     &--sights {
       order: 3;
+
+      & .form__section-title:before {
+        content: "";
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        width: 120px;
+        height: 1px;
+        background-color: @input-color;
+      }
+
+      & .form__section-title:after {
+        content: "";
+        position: absolute;
+        top: 30px;
+        right: 68px;
+        width: 100px;
+        height: 1px;
+        background-color: @input-color;
+      }
+
+      & .form__list {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
     }
 
     &--emotions {
       order: 4;
     }
+
+    &--send {
+      width: 648px;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
+.form__message {
+  width: 648px;
+}
 
+.form__button {
+  margin: 0;
+  width: 324px;
+}
 
 }
 
