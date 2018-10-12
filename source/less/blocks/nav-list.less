@@ -26,13 +26,36 @@
 }
 
 @media (min-width: @tablet-width) {
+  .nav-list__item--active .nav-list__link {
+    color: @main-menu-active-color;
+  }
+
+  .nav-list__item--active .nav-list__link:hover {
+    color: @main-menu-active-hover-color;
+  }
+
+  .nav-list__item--active .nav-list__link:active {
+    opacity: 0.3;
+  }
+
   .nav-list__link {
     font-size: 14px;
     color: @black;
     background-color: @white;
+    &:hover {
+      color: @primary-color;
+      background-color: @white;
+    }
+
+    &:active {
+     opacity: 0.3;
+    }
+
 
     &--ml {
       margin-left: 16em;
     }
+
+
   }
 }
