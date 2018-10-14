@@ -377,11 +377,6 @@
     &--sights {
       width: 100%;
       order: 3;
-
-      & .form__list {
-        display: flex;
-        flex-wrap: wrap;
-      }
     }
 
     &--emotions {
@@ -397,6 +392,11 @@
     }
   }
 
+  .form__list--sights {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .form__message {
     width: 648px;
     margin-left: 0;
@@ -406,6 +406,16 @@
   .form__button {
     margin: 0;
     width: 324px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    width: 960px;
+  }
+
+  .form__list--sights {
+    flex-wrap: nowrap;
   }
 }
 
