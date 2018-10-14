@@ -6,6 +6,7 @@
 .reasons__list {
   .list-unstyled();
   background-color: @grey;
+
 }
 
 .reasons__subtitle {
@@ -17,14 +18,22 @@
 .reasons__subtext {
   padding-left: 27px;
   padding-right: 27px;
+  padding-bottom: 50px;
   line-height: 2;
 }
 
+  .reasons__wrapper-item {
+     background-image: url("../img/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: top;
+  }
 
 .reasons__item {
   &--one {
     color: @white;
     background-color: @primary-color;
+
   }
 
   &--two {
