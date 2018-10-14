@@ -332,7 +332,6 @@
     margin-bottom: 20px;
   }
 
-
   .form__item {
     padding: 0;
 
@@ -391,6 +390,7 @@
   .form__list--sights {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .form__message {
@@ -413,6 +413,35 @@
   .form__list--sights {
     flex-wrap: nowrap;
   }
+
+  .form__input {
+    &--name {
+      width: 350px;
+    }
+
+    &--second-name,
+    &--middle-name {
+      width: 312px;
+    }
+  }
+
+  .form__label--contact {
+    display: block;
+  }
+
+  .form__list--contacts {
+    display: flex;
+    justify-content: space-between;
+
+    & .form__item {
+      display: flex;
+    }
+
+    & .form__input {
+      width: 257px;
+    }
+  }
+
 }
 
 
