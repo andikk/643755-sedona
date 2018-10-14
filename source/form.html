@@ -67,7 +67,9 @@
               </ul>
             </fieldset>
             <fieldset class="form__section form__section--contacts">
-              <legend class="form__section-title page__subtitle">Контактная информация:</legend>
+              <div class="form__caption">
+                <legend class="form__section-title page__subtitle">Контактная информация:</legend>
+              </div>
               <ul class="form__list">
                 <li class="form__item">
                   <label class="form__label form__label--contact" for="tel">Контактный телефон<sup>*</sup>:</label>
@@ -101,7 +103,9 @@
               </ul>
             </fieldset>
             <fieldset class="form__section form__section--sights">
-              <legend class="page__subtitle form__section-title">Посещенные достопримечательности:</legend>
+              <div class="form__caption">
+                <legend class="page__subtitle form__section-title">Посещенные достопримечательности:</legend>
+              </div>
               <ul class="form__list">
                 <li class="form__item form__item--checkbox">
                   <input class="form__checkbox form__checkbox--checked visually-hidden" type="checkbox" name="bridge-of-devil" id="bridge" checked>
@@ -126,10 +130,10 @@
               <label class="visually-hidden" for="message">Ваше сообщение</label>
               <textarea class="form__message" name="form__message" id="message" required>Опишите подробно все свои восторги</textarea>
             </fieldset>
-          </div>
-          <div class="form__section form__section--send">
-            <input type="submit" class="button form__button" name="button-send" id="button-send" value="Отправить отзыв">
-            <p class="form__remark"><sup>*</sup>Обязательные поля</p>
+            <div class="form__section form__section--send">
+              <input type="submit" class="button form__button" name="button-send" id="button-send" value="Отправить отзыв">
+              <p class="form__remark"><sup>*</sup>Обязательные поля</p>
+            </div>
           </div>
         </form>
       </section>

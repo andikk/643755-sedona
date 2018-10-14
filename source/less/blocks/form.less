@@ -31,7 +31,7 @@
 .form__section-title {
   padding-top: 20px;
   padding-bottom: 20px;
- }
+}
 
 .form__list {
   .list-unstyled();
@@ -81,7 +81,6 @@
     background-repeat: no-repeat;
     background-color: @input-icon-background-color;
   }
-
 }
 
 .form__label {
@@ -209,28 +208,36 @@
   }
 }
 
-.form__checkbox + .form__control-label:before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 20px;
-  width: 50px;
-  height: 50px;
-  background-color: @input-color;
-  border-radius: 5px;
-}
-
-.form__checkbox:checked + .form__control-label:before {
+.form__control-label:before {
   content: "";
   position: absolute;
   top: 0;
   left: 20px;
   width: 50px;
   height: 50px;
-  background-color: @input-color;
-  background: url("../img/icon-tick.svg");
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.form__checkbox:checked + .form__control-label:after  {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.form__checkbox:focus + .form__control-label:before,
+.form__control-label:hover:before {
+  background-color: #d5d5d5;
+}
+
+.form__control-label:active:after {
+  opacity: 0.3;
 }
 
 .form__message {
@@ -258,12 +265,13 @@
 
 @media (min-width: @tablet-width) {
   .form {
-    width: 728px;
+    width: 648px;
     .block-center();
   }
 
   .form__remark {
     display: block;
+    text-transform: uppercase;
   }
 
   .form__wrapper {
@@ -282,6 +290,32 @@
     line-height: 1.24;
   }
 
+  .form__caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &:before,
+    &:after {
+      content: "";
+      flex-grow: 1;
+      width: auto;
+      height: 1px;
+      background-color: @black;
+    }
+
+    &:after {
+      margin-left: 20px;
+    }
+
+    &:before {
+      margin-right: 20px;
+    }
+  }
+
   .form__section--contacts .form__input {
     width: 590px;
   }
@@ -298,24 +332,17 @@
     margin-bottom: 20px;
   }
 
-  .form__section--impression,
-  .form__section--introduce {
-    width: 50%;
-  }
-
   .form__section--sights .form__section-title {
     padding-left: 160px;
     padding-right: 160px;
   }
 
-  .form__section--contacts,
-  .form__section--sights,
-  .form__section--emotions {
-    width: 100%;
-  }
+  .form__item {
+    padding: 0;
 
-  .form__item--checkbox {
-    width: 350px;
+    &--checkbox {
+      width: 250px;
+    }
   }
 
   .form__section {
@@ -323,6 +350,7 @@
     position: relative;
 
     &--impression {
+      width: 50%;
       order: 0;
 
       &:after {
@@ -337,83 +365,48 @@
     }
 
     &--introduce {
+      width: 50%;
       order: 1;
     }
 
     &--contacts {
+      width: 100%;
       order: 2;
-
-      & .form__section-title:before {
-        content: "";
-        position: absolute;
-        top: 30px;
-        left: 20px;
-        width: 120px;
-        height: 1px;
-        background-color: @input-color;
-      }
-
-      & .form__section-title:after {
-        content: "";
-        position: absolute;
-        top: 30px;
-        right: 68px;
-        width: 100px;
-        height: 1px;
-        background-color: @input-color;
-      }
     }
 
     &--sights {
+      width: 100%;
       order: 3;
-
-      & .form__section-title:before {
-        content: "";
-        position: absolute;
-        top: 30px;
-        left: 20px;
-        width: 120px;
-        height: 1px;
-        background-color: @input-color;
-      }
-
-      & .form__section-title:after {
-        content: "";
-        position: absolute;
-        top: 30px;
-        right: 68px;
-        width: 100px;
-        height: 1px;
-        background-color: @input-color;
-      }
 
       & .form__list {
         display: flex;
         flex-wrap: wrap;
       }
-
     }
 
     &--emotions {
+      width: 100%;
       order: 4;
     }
 
     &--send {
-      width: 648px;
+      width: 100%;
+      order: 5;
       display: flex;
       justify-content: space-between;
     }
   }
 
-.form__message {
-  width: 648px;
-}
+  .form__message {
+    width: 648px;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
 
-.form__button {
-  margin: 0;
-  width: 324px;
-}
-
+  .form__button {
+    margin: 0;
+    width: 324px;
+  }
 }
 
 
