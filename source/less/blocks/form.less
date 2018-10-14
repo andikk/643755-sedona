@@ -435,13 +435,32 @@
 
     & .form__item {
       display: flex;
+      align-items: baseline;
     }
 
     & .form__input {
       width: 257px;
+      margin-top: 0px;
     }
   }
 
+  .form__input-icon--e-mail:after,
+  .form__input-icon--tel:after {
+    top: 0px;
+  }
+
+  .form__message {
+    width: 1010px;
+    height: 160px;
+  }
+
+  .form__control-label:before {
+    top: -12px;
+  }
+
+  .form__checkbox:checked + .form__control-label:after {
+    top: -12px;
+  }
 }
 
 
