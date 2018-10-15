@@ -9,11 +9,18 @@
 }
 
 .reasons__subtitle {
-  padding-left: 33px;
-  padding-right: 30px;
-  line-height: 26px;
-  margin-top: 38px;
+  padding-left: 26px;
+  padding-right: 28px;
+  line-height: 27px;
+  margin-top: 37px;
   margin-bottom: 28px;
+}
+
+.reasons__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
 }
 
 .reasons__subtext {
@@ -24,28 +31,15 @@
   line-height: 26px;
 }
 
-.reasons__number {
-  position: relative;
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 11px;
-    left: 129px;
-    width: 10px;
-    height: 1px;
-    background-color: @white;
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    top: 11px;
-    left: 178px;
-    width: 10px;
-    height: 1px;
-    background-color: @white;
-  }
+.reasons__number:before,
+.reasons__number:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px;
+  width: 9px;
+  height: 1px;
+  background-color: @white;
 }
 
 .reasons__item {
@@ -75,26 +69,15 @@
     background-color: @grey;
     border-bottom: 1px solid @border-color;
 
-    & .reasons__number {
-      &:before {
-        left: 109px;
-        background-color: @black;
-      }
-
-      &:after {
-        left: 159px;
-        background-color: @black;
+    & .reasons__number:before,
+      .reasons__number:after {
+        background-color: @dark-grey;
       }
     }
-  }
 
   &--five {
    border-bottom: none;
   }
-}
-
-.reasons__title {
-  margin: 0;
 }
 
 .reasons__text--one {
@@ -102,7 +85,7 @@
   padding-bottom: 22px;
 
   & .reasons__title {
-    margin-bottom: -6px;
+    margin-bottom: -9px;
   }
 
   & .reasons__description {
@@ -125,7 +108,7 @@
   padding-bottom: 18px;
 
   & .reasons__title {
-    margin-bottom: -4px;
+    margin-bottom: -6px;
   }
 
   & .reasons__description {
@@ -138,7 +121,7 @@
   padding-bottom: 18px;
 
   & .reasons__title {
-    margin-bottom: -4px;
+    margin-bottom: -6px;
   }
 
   & .reasons__description {
@@ -163,9 +146,6 @@
   }
 }
 
-
-
-
 .reasons__image {
   display: block;
   width: 100%;
@@ -184,6 +164,7 @@
 
   .reasons__title {
     font-size: 21px;
+    line-height: 26px;
     padding-left: 53px;
     padding-right: 53px;
   }
@@ -233,6 +214,8 @@
   .reasons__subtitle {
     padding-left: 127px;
     padding-right: 127px;
+    font-size: 21px;
+    line-height: 26px;
   }
 
   .reasons__subtext{
@@ -257,10 +240,15 @@
   }
 }
 
-
 @media (min-width: @desktop-width) {
   .reasons__image-wrapper {
     height: 256px;
     overflow: hidden;
   }
+
+  .reasons__subtitle {
+    font-size: 21px;
+    line-height: 26px;
+  }
+
 }
