@@ -24,6 +24,30 @@
   line-height: 26px;
 }
 
+.reasons__number {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 129px;
+    width: 10px;
+    height: 1px;
+    background-color: @white;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 178px;
+    width: 10px;
+    height: 1px;
+    background-color: @white;
+  }
+}
+
 .reasons__item {
   &--one {
     color: @white;
@@ -50,6 +74,18 @@
     color: @dark-grey;
     background-color: @grey;
     border-bottom: 1px solid @border-color;
+
+    & .reasons__number {
+      &:before {
+        left: 109px;
+        background-color: @black;
+      }
+
+      &:after {
+        left: 159px;
+        background-color: @black;
+      }
+    }
   }
 
   &--five {
