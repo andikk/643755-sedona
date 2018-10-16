@@ -156,6 +156,15 @@
     padding-top: 20px;
    }
 
+  .reasons__subtitle {
+    margin-top: 26px;
+    margin-bottom: 31px;
+    padding-left: 127px;
+    padding-right: 127px;
+    font-size: 21px;
+    line-height: 26px;
+  }
+
   .reasons__list {
     display: flex;
     flex-direction: row;
@@ -163,15 +172,17 @@
   }
 
   .reasons__title {
-    font-size: 21px;
-    line-height: 26px;
     padding-left: 53px;
     padding-right: 53px;
+    font-size: 21px;
+    line-height: 26px;
   }
 
   .reasons__description {
     padding-left: 40px;
     padding-right: 40px;
+    font-size: 14px;
+    line-height: 21px;
   }
 
   .reasons__item {
@@ -179,6 +190,19 @@
 
     &--one {
       background-image: none;
+
+      & .reasons__title {
+        margin-bottom: -5px;
+      }
+
+      & .reasons__number {
+        margin-bottom: 19px;
+      }
+
+      & .reasons__description {
+        padding-left: 41px;
+        padding-right: 44px;
+      }
     }
 
     &--one,
@@ -211,13 +235,6 @@
     display: flex;
   }
 
-  .reasons__subtitle {
-    padding-left: 127px;
-    padding-right: 127px;
-    font-size: 21px;
-    line-height: 26px;
-  }
-
   .reasons__subtext{
     margin-bottom: 50px;
   }
@@ -226,7 +243,7 @@
     width: 33%;
 
     &--one {
-      padding-top: 34px;
+      padding-top: 43px;
     }
 
     &--two {
