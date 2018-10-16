@@ -81,19 +81,12 @@
 @media (min-width: @tablet-width) {
   .features {
     display: flex;
+    padding-top: 66px;
   }
-
-  .features__item {
-    align-items: center;
-  }
-
-  .features__item--gift {
-    order: 1;
-  }
-
   .features__item {
     width: 33%;
     text-align: center;
+    align-items: center;
     flex-direction: column;
   }
 
@@ -111,4 +104,49 @@
   .features__text-block {
     padding: 0;
   }
+
+  .features__item--house:before {
+    margin-top: -8px;
+    margin-left: 1px;
+    height: 77px;
+    width: 72px;
+    margin-bottom: 20px;
+  }
+
+  .features__item--house .features__title {
+    margin-bottom: 22px;
+    margin-left: -10px;
+  }
+
+  .features__item--house .features__description {
+    padding-left: 21px;
+    padding-right: 30px;
+  }
+
+  .features__item--food:before {
+    margin-top: -4px;
+    margin-left: 0px;
+    margin-bottom: 27px;
+    height: 66px;
+    width: 72px;
+  }
+
+  .features__item--food .features__title {
+    margin-left: -10px;
+    margin-bottom: 22px;
+  }
+
+  .features__item--food .features__description {
+    margin-left: -3px;
+    padding-left: 21px;
+    padding-right: 30px;
+  }
+
+
+
+  .features__item--gift {
+    order: 1;
+  }
+
+
 }
