@@ -81,7 +81,8 @@
 @media (min-width: @tablet-width) {
   .features {
     display: flex;
-    padding-top: 66px;
+    padding-top: 81px;
+    padding-bottom: 36px;
   }
   .features__item {
     width: 33%;
@@ -99,6 +100,7 @@
     line-height: 21px;
     padding-left: 20px;
     padding-right: 20px;
+    margin-bottom: 0px;
   }
 
   .features__text-block {
@@ -106,7 +108,7 @@
   }
 
   .features__item--house:before {
-    margin-top: -8px;
+    margin-top: -23px;
     margin-left: 1px;
     height: 77px;
     width: 72px;
@@ -124,7 +126,7 @@
   }
 
   .features__item--food:before {
-    margin-top: -4px;
+    margin-top: -20px;
     margin-left: 0px;
     margin-bottom: 27px;
     height: 66px;
@@ -138,15 +140,28 @@
 
   .features__item--food .features__description {
     margin-left: -3px;
-    padding-left: 21px;
-    padding-right: 30px;
+    padding-left: 27px;
+    padding-right: 33px;
   }
-
-
 
   .features__item--gift {
     order: 1;
   }
 
+  .features__item--gift .features__title {
+    margin-left: -12px;
+    margin-bottom: 21px;
+  }
 
+  .features__item--gift .features__description {
+    margin-left: -10px;
+  }
+
+  .features__item--gift:before {
+    margin-top: -26px;
+    margin-bottom: 25px;
+    width: 77px;
+    height: 76px;
+    margin-left: 10px;
+  }
 }
