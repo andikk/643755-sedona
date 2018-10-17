@@ -7,6 +7,10 @@
   text-align: left;
 }
 
+.features__br {
+  display: none;
+}
+
 .features__title {
   margin: 0;
   font-size: 18px;
@@ -164,4 +168,36 @@
     height: 76px;
     margin-left: 10px;
   }
+}
+
+@media (min-width: @desktop-width) {
+  .features {
+    padding-bottom: 55px;
+  }
+
+  .features__br {
+    display: inline;
+  }
+
+  .features__item--house:before {
+    margin-top: -22px;
+    margin-left: -3px;
+  }
+
+  .features__item--house .features__description {
+    padding-left: 19px;
+    padding-right: 34px;
+  }
+
+  .features__item--food .features__description {
+    padding-left: 23px;
+    padding-right: 34px;
+  }
+
+  .features__item--gift .features__description {
+    padding-left: 35px;
+    padding-right: 34px;
+  }
+
+
 }

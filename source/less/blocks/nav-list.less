@@ -73,3 +73,21 @@
     }
   }
 }
+
+@media (min-width: @desktop-width) {
+  .nav-list__link {
+    margin-left: 10px;
+
+    &--ml {
+      margin-left: 254px;
+    }
+  }
+
+  .nav-list__item {
+    &:first-child .nav-list__link {
+      margin-left: 20px;
+      margin-right: -4px;
+      padding-right: 28px;
+    }
+  }
+}

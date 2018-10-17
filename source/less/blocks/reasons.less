@@ -283,8 +283,6 @@
         padding-right: 16px;
       }
     }
-
-
   }
 
   .reasons__wrapper-item {
@@ -314,14 +312,124 @@
 }
 
 @media (min-width: @desktop-width) {
-  .reasons__image-wrapper {
-    height: 256px;
-    overflow: hidden;
+
+  .reasons {
+    padding-top: 22px;
   }
 
   .reasons__subtitle {
     font-size: 21px;
     line-height: 26px;
+    padding-left: 310px;
+    padding-right: 310px;
+  }
+
+  .reasons__item {
+    border-bottom: none;
+
+    &--one {
+      background-image: none;
+
+      & .reasons__title {
+        padding-left: 104px;
+        padding-right: 101px;
+        padding-top: 5px;
+      }
+
+      & .reasons__number {
+        margin-bottom: 21px;
+      }
+
+      & .reasons__description {
+        padding-left: 54px;
+        padding-right: 50px;
+      }
+    }
+
+    &--two {
+
+      & .reasons__title {
+        padding-left: 96px;
+        padding-right: 100px;
+        margin-top: 7px;
+        margin-bottom: -4px;
+      }
+
+      & .reasons__number {
+        margin-bottom: 21px;
+        margin-left: -6px;
+      }
+
+      & .reasons__description {
+        margin-left: 20px;
+        padding-left: 59px;
+        padding-right: 83px;
+      }
+    }
+
+    &--three {
+
+      & .reasons__title {
+        padding-left: 96px;
+        padding-right: 73px;
+        padding-top: 2px;
+      }
+
+      & .reasons__number {
+        margin-left: 20px;
+      }
+
+      & .reasons__description {
+        padding-left: 36px;
+        padding-right: 1px;
+        padding-bottom: 20px;
+      }
+    }
+
+    &--four {
+
+      & .reasons__title {
+        padding-left: 155px;
+        padding-right: 89px;
+        padding-top: 2px;
+      }
+
+      & .reasons__number {
+        margin-left: 65px;
+      }
+
+      & .reasons__description {
+        padding-left: 67px;
+        padding-right: 0;
+      }
+    }
+
+    &--five {
+
+      & .reasons__title {
+        padding-left: 138px;
+        padding-right: 35px;
+        padding-top: 2px;
+      }
+
+      & .reasons__number {
+        margin-left: 110px;
+      }
+
+      & .reasons__description {
+        padding-left: 67px;
+        padding-right: 0;
+      }
+    }
+
+
+  }
+
+
+
+  .reasons__image-wrapper {
+    height: 256px;
+    overflow: hidden;
   }
 
 }
