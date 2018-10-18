@@ -53,12 +53,11 @@
   position: absolute;
   top: -3px;
   left: 0;
-  //opacity: 0.3;
+  fill: black;
+  opacity: 0.3;
 }
 
-.photo__icon-like {
-  fill: #b53e3e;
-}
+
 
 .photo__picture {
   display: block;
@@ -73,6 +72,8 @@
 }
 
 @media (min-width: @tablet-width) {
+
+
   .photo {
     padding-top: 30px;
     padding-bottom: 10px;
@@ -146,6 +147,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .photo__icon-like {
+    fill: @white;
+  }
+
   .photo {
     padding-bottom: 30px;
   }
