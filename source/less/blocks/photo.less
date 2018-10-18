@@ -1,3 +1,7 @@
+.photo__br {
+  display: none;
+}
+
 .photo {
   padding-top: 21px;
   padding-bottom: 20px;
@@ -147,16 +151,32 @@
 }
 
 @media (min-width: @desktop-width) {
+  .photo__br {
+    display: inline;
+  }
+
   .photo__icon-like {
     fill: @white;
+    opacity: 1;
   }
 
   .photo {
+    padding-top: 67px;
     padding-bottom: 30px;
   }
 
   .photo__slogan {
-    padding-bottom: 30px;
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-bottom: 57px;
+  }
+
+  .photo__description {
+    margin-left: 0px;
+  }
+
+  .photo__title {
+    margin-top: 10px;
   }
 
   .photo__list {
