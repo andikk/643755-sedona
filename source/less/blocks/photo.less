@@ -1,3 +1,18 @@
+.photo {
+  padding-top: 21px;
+  padding-bottom: 20px;
+}
+
+.photo__subtitle {
+  margin-bottom: 28px;
+}
+
+.photo__slogan {
+  padding-left: 25px;
+  padding-right: 23px;
+  padding-bottom: 16px;
+}
+
 .photo__list {
   .list-unstyled();
   .block-center()
@@ -6,7 +21,7 @@
 .photo__item {
   font-size: 14px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 6px;
   border-bottom: 1px solid @border-color;
 
   &--first {
@@ -14,14 +29,12 @@
   }
 }
 
-.photo__slogan {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
 .photo__title {
+  margin-bottom: 3px;
+  padding-top: 2px;
   text-transform: uppercase;
-  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 .photo__text {
@@ -31,20 +44,20 @@
 .photo__like {
   font-size: 14;
   font-weight: bold;
-  padding-left: 30px;
+  padding-bottom: 2px;
+  padding-left: 37px;
   position: relative;
+}
 
-  &:before {
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: 0;
-    width: 23px;
-    height: 21px;
-    background: url("../img/icon-like.svg");
-    background-repeat: no-repeat;
-    opacity: 0.3;
-  }
+.photo__icon-like {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  //opacity: 0.3;
+}
+
+.photo__icon-like path {
+  fill: #b53e3e;
 }
 
 .photo__picture {
