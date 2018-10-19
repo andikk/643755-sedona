@@ -7,7 +7,8 @@
 
 .social__item {
   display: block;
-  padding-left: 18px;
+  padding-left: 14px;
+  padding-right: 4px;
 }
 
 .social__link {
@@ -20,16 +21,6 @@
   background-color: @primary-color;
   color: @white;
 
-  & svg {
-    position: absolute;
-    top: 14px;
-    left: 15px;
-
-    & path {
-      fill: @white;
-    }
-  }
-
   &:hover {
     background-color: @social-hover-color;
   }
@@ -40,5 +31,16 @@
 
   &:active svg path {
     opacity: 0.3;
+  }
+}
+
+
+.social__link svg {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+
+  & path {
+    fill: @white;
   }
 }
