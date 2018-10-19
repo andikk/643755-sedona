@@ -1,10 +1,11 @@
+
 .form__wrapper {
   margin-top: 17px;
   border-top: 1px solid @border-color;
   padding-left: 3px;
 }
 
-.form__remark {
+.form__remark, .form__caption-tel {
   display: none;
 }
 
@@ -529,8 +530,44 @@
 }
 
 @media (min-width: @desktop-width) {
+  .form__caption-tel {
+    display: inline;
+  }
+
+  .form__caption-contact-tel {
+    display: none;
+  }
+
   .form {
+    padding-top: 38px;
     width: 960px;
+  }
+
+  .form__wrapper {
+    margin-top: 0;
+  }
+
+  .form__title {
+    margin-bottom: 16px;
+  }
+
+  .form__text {
+    padding-right: 260px;
+    padding-left: 260px;
+    margin-bottom: 0;
+  }
+
+  .form__section--impression .form__control-label {
+    padding-left: 81px;
+  }
+
+  .form__section--introduce .form__section-title {
+    padding-top: 59px;
+    padding-left: 80px;
+  }
+
+  .form__section--introduce .form__list {
+    padding-left: 80px;
   }
 
   .form__list--sights {
@@ -539,12 +576,15 @@
 
   .form__input {
     &--name {
-      width: 350px;
+      width: 348px;
     }
 
-    &--second-name,
+    &--second-name {
+      width: 311px;
+    }
+
     &--middle-name {
-      width: 312px;
+      width: 314px;
     }
   }
 
