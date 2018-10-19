@@ -322,15 +322,17 @@
     .block-center();
   }
 
-
   .form__title {
     padding-top: 29px;
     margin-bottom: 16px;
   }
 
   .form__remark {
+    font-size: 14px;
+    line-height: 26px;
     display: block;
     text-transform: uppercase;
+    padding-top: 4px;
   }
 
   .form__wrapper {
@@ -364,6 +366,31 @@
     padding-top: 56px;
     padding-left: 59px;
     text-align: left;
+    padding-bottom: 42px;
+  }
+
+  .form__section--introduce .form__list {
+    padding-left: 57px;
+  }
+
+  .form__input--name {
+    width: 215px;
+    margin-left: 12px;
+  }
+
+  .form__input--second-name,
+  .form__input--middle-name  {
+    width: 177px;
+    margin-left: 12px;
+  }
+
+  .form__section--contacts .form__section-title {
+    padding-top: 4px;
+    padding-bottom: 6px;
+  }
+
+  .form__input--tel {
+    margin-bottom: 20px;
   }
 
   .form__item--radio {
@@ -372,6 +399,14 @@
 
   .form__control-label {
     padding-left: 76px;
+  }
+
+  .form__section--sights .form__section-title {
+    padding-bottom: 38px;
+  }
+
+  .form__section--sights .form__control-label {
+    padding-left: 101px;
   }
 
   .form__caption {
@@ -403,11 +438,18 @@
     width: 590px;
   }
 
+  .form__control-label:before,
+  .form__checkbox:checked + .form__control-label:after {
+    left: 24px;
+  }
+
+
   .form__item {
     padding: 0;
 
     &--checkbox {
       width: 250px;
+      padding-bottom: 6px;
     }
   }
 
@@ -422,8 +464,8 @@
       &:after {
         content: "";
         position: absolute;
-        top: 20px;
-        right: 10px;
+        top: 62px;
+        right: 0px;
         width: 1px;
         height: 292px;
         background-color: @input-color;
@@ -436,6 +478,8 @@
     }
 
     &--contacts {
+      padding-bottom: 4px;
+      padding-top: 11px;
       width: 100%;
       order: 2;
     }
@@ -443,11 +487,14 @@
     &--sights {
       width: 100%;
       order: 3;
+      padding-top: 0px;
+      padding-bottom: 5px;
     }
 
     &--emotions {
       width: 100%;
       order: 4;
+      padding-top: 58px;
     }
 
     &--send {
@@ -455,6 +502,8 @@
       order: 5;
       display: flex;
       justify-content: space-between;
+      padding-top: 3px;
+      padding-bottom: 61px;
     }
   }
 
@@ -468,11 +517,14 @@
     width: 648px;
     margin-left: 0;
     margin-bottom: 20px;
+    padding-left: 20px;
   }
 
   .form__button {
     margin: 0;
     width: 324px;
+    padding-bottom: 7px;
+    padding-right: 18px;
   }
 }
 
