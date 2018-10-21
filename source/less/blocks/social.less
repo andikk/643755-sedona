@@ -25,6 +25,10 @@
     background-color: @social-hover-color;
   }
 
+  &:focus {
+    background-color: @social-hover-color;
+  }
+
   &:active {
     background-color: @active-color;
   }
@@ -33,7 +37,6 @@
     opacity: 0.3;
   }
 }
-
 
 .social__link svg {
   position: absolute;
@@ -44,3 +47,17 @@
     fill: @white;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .social__list {
+    padding-left: 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .social__list {
+    padding-top: 4px;
+  }
+}
+
+

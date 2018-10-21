@@ -28,6 +28,10 @@
     background-color: @hover-color;
   }
 
+  &:focus {
+    background-color: @hover-color;
+  }
+
   &:active {
     background-color: @active-color;
   }
@@ -47,7 +51,8 @@
     color: @main-menu-active-color;
   }
 
-  .nav-list__item--active .nav-list__link:hover {
+  .nav-list__item--active .nav-list__link:hover,
+  .nav-list__item--active .nav-list__link:focus {
     color: @main-menu-active-hover-color;
   }
 
@@ -64,6 +69,11 @@
     box-shadow: none;
 
     &:hover {
+      color: @primary-color;
+      background-color: @white;
+    }
+
+    &:focus {
       color: @primary-color;
       background-color: @white;
     }

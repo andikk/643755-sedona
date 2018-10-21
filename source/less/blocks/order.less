@@ -14,6 +14,16 @@
   margin-bottom: 50px;
 }
 
+.order__map {
+  position: relative;
+}
+
+.order__map-pointer {
+  position: absolute;
+  top: 158px;
+  left: 143px;
+}
+
 .order__map-img {
   width: 100%;
 }
@@ -51,7 +61,7 @@
   .order__text {
     padding-left: 168px;
     padding-right: 165px;
-    margin-bottom: 43px;
+    margin-bottom: 41px;
   }
 
   .order__button {
@@ -62,14 +72,24 @@
   .order__map {
     padding-top: 7px;
   }
+
+  .order__map-pointer {
+    top: 169px;
+    left: 369px;
+  }
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: @desktop-width) {
   .order__text {
     margin-bottom: 48px;
   }
 
   .order__button {
-    margin-bottom: 60px;
+    margin-bottom: 56px;
+  }
+
+  .order__map-pointer {
+    top: 168px;
+    left: 586px;
   }
 }
