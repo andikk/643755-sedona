@@ -4,7 +4,7 @@
   padding-left: 3px;
 }
 
-.form__remark, .form__caption-tel {
+.form__remark, .form__label-tel {
   display: none;
 }
 
@@ -86,7 +86,7 @@
 
 .form__section--send {
   border-bottom: none;
-  padding-bottom: 37px;
+  padding-bottom: 40px;
 }
 
 .form__list {
@@ -316,10 +316,28 @@
   font-weight: bold;
 }
 
+
+.form__modal {
+  position: fixed;
+  left: 0;
+  top: 30px;
+  z-index: 10;
+  width: 320px;
+  .block-center();
+  box-shadow: 0 19px 15px -5px rgba(0, 1, 1, 0.15),
+    0 -9px 15px -5px rgba(0, 1, 1, 0.15);
+}
+
+
+
 @media (min-width: @tablet-width) {
   .form {
     width: 648px;
     .block-center();
+  }
+
+  .form__list {
+    margin-bottom: 37px;
   }
 
   .form__title {
@@ -357,13 +375,13 @@
   }
 
   .form__section--impression .form__section-title {
-    padding-top: 56px;
+    padding-top: 58px;
     padding-right: 51px;
-    padding-bottom: 56px;
+    padding-bottom: 54px;
   }
 
   .form__section--introduce .form__section-title {
-    padding-top: 56px;
+    padding-top: 58px;
     padding-left: 59px;
     text-align: left;
     padding-bottom: 42px;
@@ -384,11 +402,6 @@
     margin-left: 12px;
   }
 
-  .form__section--contacts .form__section-title {
-    padding-top: 4px;
-    padding-bottom: 6px;
-  }
-
   .form__input--tel {
     margin-bottom: 20px;
   }
@@ -402,40 +415,32 @@
   }
 
   .form__section--sights .form__section-title {
-    padding-bottom: 38px;
+    padding-bottom: 11px;
+    margin-bottom: 25px;
+  }
+
+  .form__list--sights {
+    padding-top: 20px;
+    margin-bottom: 18px;
   }
 
   .form__section--sights .form__control-label {
     padding-left: 101px;
   }
 
-  .form__caption {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
 
-    &:before,
-    &:after {
-      content: "";
-      flex-grow: 1;
-      width: auto;
-      height: 1px;
-      background-color: @grey;
-    }
-
-    &:after {
-      margin-left: 60px;
-    }
-
-    &:before {
-      margin-right: 60px;
-    }
+  .form__section--contacts .form__section-title {
+    padding-top: 4px;
+    padding-bottom: 6px;
+    margin-bottom: 8px;
   }
 
   .form__section--contacts .form__input {
     width: 590px;
+  }
+
+  .form__section--emotions .form__section-title {
+    padding-top: 0;
   }
 
   .form__control-label:before,
@@ -478,7 +483,7 @@
     }
 
     &--contacts {
-      padding-bottom: 4px;
+      margin-bottom: -29px;
       padding-top: 11px;
       width: 100%;
       order: 2;
@@ -513,6 +518,35 @@
     justify-content: center;
   }
 
+  .form__caption {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+
+ .form__caption::before {
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 0;
+   right: 0;
+   display: inline-block;
+   vertical-align: middle;
+   height: 1px;
+   width: 100%;
+   background-color: #eeeeee;
+  }
+
+  .form__caption span {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 500px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #ffffff;
+  }
+
   .form__message {
     width: 648px;
     margin-left: 0;
@@ -529,17 +563,17 @@
 }
 
 @media (min-width: @desktop-width) {
-  .form__caption-tel {
-    display: inline;
-  }
-
-  .form__caption-contact-tel {
-    display: none;
-  }
-
   .form {
     padding-top: 38px;
     width: 960px;
+  }
+
+  .form__label-tel {
+    display: inline;
+  }
+
+  .form__label-contact-tel {
+    display: none;
   }
 
   .form__wrapper {
@@ -591,21 +625,21 @@
     padding-top: 11px;
   }
 
-  .form__section--contacts .form__caption {
-    padding-bottom: 70px;
-  }
-
   .form__section--contacts .form__section-title {
     padding-bottom: 6px;
+    margin-bottom: 55px;
+  }
+
+  .form__section--contacts .form__input {
+    width: 254px;
   }
 
   .form__section--sights .form__section-title {
     padding-top: 8px;
-    margin-right: 36px;
   }
 
   .form__section--emotions .form__section-title {
-    padding-top: 14px;
+    margin-bottom: -4px;
   }
 
   .form__label--contact {
@@ -614,18 +648,17 @@
     margin-right: 13px;
   }
 
+  .form__item--email {
+    margin-left: 143px;
+  }
+
   .form__list--contacts {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     & .form__item {
       display: flex;
       align-items: baseline;
-    }
-
-    & .form__input {
-      width: 257px;
-      margin-top: 0px;
     }
   }
 
