@@ -310,33 +310,55 @@
 .form__modal {
   position: fixed;
   left: 0;
-  top: 30px;
+  top: 30vh;
   z-index: 10;
   width: 320px;
   .block-center();
-  box-shadow: 0 19px 15px -5px rgba(0, 1, 1, 0.15),
-    0 -9px 15px -5px rgba(0, 1, 1, 0.15);
+  box-shadow: 0 19px 15px -5px rgba(0, 1, 1, 0.15), 0 -9px 15px -5px rgba(0, 1, 1, 0.15);
   background-color: @white;
 }
 
 .form__modal--failure {
   min-height: 282px;
-  padding-top: 45px;
+  padding-top: 35px;
   padding-bottom: 35px;
 }
 
-.form__modal-title {
-  padding-bottom: 35px;
+.form__modal--failure .form__modal-title {
+  padding-bottom: 25px;
 }
 
-.form__modal-text {
-  margin-bottom: 29px;
+.form__modal--failure .form__modal-text {
+  margin-bottom: 20px;
 }
 
-.form__modal-button {
+.form__modal--failure .form__modal-button {
   width: 180px;
 }
 
+.form__modal--success {
+  padding-top: 30px;
+}
+
+.form__modal--success .form__modal-title {
+  padding-bottom: 25px;
+}
+
+.form__modal--success .form__modal-text {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 20px;
+}
+
+.form__modal--success .form__modal-button {
+  width: 279px;
+}
+
+.form__wrapper-for-modal-button {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: @grey;
+}
 
 @media (min-width: @tablet-width) {
   .form {
