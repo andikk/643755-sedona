@@ -122,7 +122,7 @@
 
   &--tel {
     &::after {
-      background: url("../img/icon-phone.svg");
+      background-image: url("../img/icon-phone.svg");
     }
   }
 
@@ -544,6 +544,7 @@
 }
 
 @media (min-width: @desktop-width) {
+
   .form {
     padding-top: 38px;
     width: 960px;
@@ -584,10 +585,6 @@
     padding-left: 80px;
   }
 
-  .form__list--sights {
-    flex-wrap: nowrap;
-  }
-
   .form__input {
     &--name {
       width: 348px;
@@ -604,19 +601,25 @@
 
   .form__section--contacts {
     padding-top: 11px;
+    margin-bottom: 5px;
   }
 
   .form__section--contacts .form__section-title {
     padding-bottom: 6px;
-    margin-bottom: 55px;
+    margin-bottom: 60px;
   }
 
   .form__section--contacts .form__input {
     width: 254px;
   }
 
+  .form__section--sights {
+    margin-bottom: 18px;
+  }
+
   .form__section--sights .form__section-title {
     padding-top: 8px;
+    margin-bottom: 47px;
   }
 
   .form__section--emotions .form__section-title {
@@ -671,5 +674,87 @@
     width: 482px;
     padding-left: 12px;
     padding-right: 12px;
+  }
+
+  .form__caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+
+  .form__list {
+    list-style: none;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+  }
+
+  .form__list--sights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__item {
+    padding: 0;
+    position: relative;
+    text-align: left;
+  }
+
+  .form__item--checkbox {
+    max-width: 205px;
+    min-width: 180px;
+    margin-bottom: 55px;
+  }
+
+  .form__control-label {
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: -1px;
+    padding-left: 80px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.44;
+    letter-spacing: normal;
+    text-align: left;
+  }
+
+  .form__control-label::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 53px;
+    height: 53px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+  }
+
+  .form__checkbox:checked + .form__control-label::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0px;
+    width: 54px;
+    height: 54px;
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .form__item--radio {
+    margin-bottom: 52px;
+  }
+
+  .form__section--introduce {
+    padding-bottom: 56px;
+  }
+
+  .form__section--sights .form__control-label {
+    padding-left: 83px;
   }
 }
