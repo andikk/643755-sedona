@@ -4,20 +4,17 @@
   padding-left: 3px;
 }
 
-.form__remark, .form__label-tel {
+.form__remark,
+.form__label-tel {
   display: none;
 }
 
 .form__section {
+  display: block;
   margin: 0 0;
   padding: 0 0;
   border: none;
   border-bottom: 1px solid @border-color;
-  display: block;
-
-  &--contacts {
-    padding-bottom: 20px;
-  }
 }
 
 .form__title {
@@ -75,9 +72,9 @@
 }
 
 .form__section--emotions {
-  border-bottom: none;
   padding-top: 18px;
   padding-bottom: 31px;
+  border-bottom: none;
 }
 
 .form__section--emotions .form__section-title {
@@ -85,8 +82,8 @@
 }
 
 .form__section--send {
-  border-bottom: none;
   padding-bottom: 40px;
+  border-bottom: none;
 }
 
 .form__list {
@@ -111,39 +108,36 @@
 .form__input-icon {
   position: relative;
 
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     top: -20px;
     right: -58px;
     width: 58px;
     height: 58px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: @input-icon-background-color;
   }
 
   &--tel {
-    &:after {
+    &::after {
       background: url("../img/icon-phone.svg");
     }
   }
 
   &--e-mail {
-    &:after {
+    &::after {
       background-image: url("../img/icon-mail.svg");
     }
-  }
-
-  &:after {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: @input-icon-background-color;
   }
 }
 
 .form__label {
-  text-transform: uppercase;
-  text-align: left;
   font-size: 14px;
   line-height: 1.86;
+  text-transform: uppercase;
+  text-align: left;
 
   &--contact {
     display: block;
@@ -153,7 +147,7 @@
 }
 
 .form__input {
-  height: 58px;
+  min-height: 58px;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
@@ -183,7 +177,7 @@
   }
 
   &--second-name,
-  &--middle-name   {
+  &--middle-name {
     width: 193px;
     margin-top: 15px;
     margin-left: 12px;
@@ -198,7 +192,7 @@
     margin-bottom: 10px;
     margin-left: 3px;
     padding-left: 19px;
-    padding-top: 0px;
+    padding-top: 0;
     width: 221px;
   }
 }
@@ -208,22 +202,19 @@
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
   line-height: 1.44;
-  letter-spacing: normal;
   text-align: left;
 }
 
-.form__radio-control + .form__control-label  {
+.form__radio-control + .form__control-label {
   position: relative;
   cursor: pointer;
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     top: -15px;
-    left: 0px;
+    left: 0;
     width: 56px;
     height: 56px;
     background-color: @body-color;
@@ -231,8 +222,8 @@
   }
 }
 
-.form__radio-control:checked + .form__control-label  {
-  &:after {
+.form__radio-control:checked + .form__control-label {
+  &::after {
     content: "";
     position: absolute;
     top: 2px;
@@ -246,22 +237,22 @@
 
 .form__radio-control:focus + .form__control-label,
 .form__item--radio:hover .form__control-label {
-  &:before {
+  &::before {
     background-color: @disabled-color;
   }
 }
 
 .form__item--radio:active .form__control-label {
-  &:before {
+  &::before {
     background-color: @radio-active-color;
   }
 
-  &:after {
+  &::after {
     background-color: rgba(51, 51, 51, 0.3);
   }
 }
 
-.form__control-label:before {
+.form__control-label::before {
   content: "";
   position: absolute;
   top: -13px;
@@ -272,7 +263,7 @@
   border-radius: 5px;
 }
 
-.form__checkbox:checked + .form__control-label:after  {
+.form__checkbox:checked + .form__control-label::after {
   content: "";
   position: absolute;
   top: -13px;
@@ -284,12 +275,12 @@
   background-position: center;
 }
 
-.form__checkbox:focus + .form__control-label:before,
-.form__control-label:hover:before {
-  background-color: #d5d5d5;
+.form__checkbox:focus + .form__control-label::before,
+.form__control-label:hover::before {
+  background-color: @radio-active-color;
 }
 
-.form__control-label:active:after {
+.form__control-label:active::after {
   opacity: 0.3;
 }
 
@@ -316,7 +307,6 @@
   font-weight: bold;
 }
 
-
 .form__modal {
   position: fixed;
   left: 0;
@@ -327,8 +317,6 @@
   box-shadow: 0 19px 15px -5px rgba(0, 1, 1, 0.15),
     0 -9px 15px -5px rgba(0, 1, 1, 0.15);
 }
-
-
 
 @media (min-width: @tablet-width) {
   .form {
@@ -346,9 +334,9 @@
   }
 
   .form__remark {
+    display: block;
     font-size: 14px;
     line-height: 26px;
-    display: block;
     text-transform: uppercase;
     padding-top: 4px;
   }
@@ -356,8 +344,8 @@
   .form__wrapper {
     display: flex;
     flex-wrap: wrap;
-    border: none;
     padding: 0;
+    border: none;
   }
 
   .form__text {
@@ -368,10 +356,6 @@
   .form__section-title {
     font-size: 21px;
     line-height: 1.24;
-  }
-
-  .form__section--impression {
-    padding-top: 20px;
   }
 
   .form__section--impression .form__section-title {
@@ -397,7 +381,7 @@
   }
 
   .form__input--second-name,
-  .form__input--middle-name  {
+  .form__input--middle-name {
     width: 177px;
     margin-left: 12px;
   }
@@ -420,6 +404,9 @@
   }
 
   .form__list--sights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding-top: 20px;
     margin-bottom: 18px;
   }
@@ -427,7 +414,6 @@
   .form__section--sights .form__control-label {
     padding-left: 101px;
   }
-
 
   .form__section--contacts .form__section-title {
     padding-top: 4px;
@@ -443,8 +429,8 @@
     padding-top: 0;
   }
 
-  .form__control-label:before,
-  .form__checkbox:checked + .form__control-label:after {
+  .form__control-label::before,
+  .form__checkbox:checked + .form__control-label::after {
     left: 24px;
   }
 
@@ -463,14 +449,15 @@
     position: relative;
 
     &--impression {
-      width: 50%;
       order: 0;
+      padding-top: 20px;
+      width: 50%;
 
-      &:after {
+      &::after {
         content: "";
         position: absolute;
         top: 62px;
-        right: 0px;
+        right: 0;
         width: 1px;
         height: 292px;
         background-color: @input-color;
@@ -483,16 +470,16 @@
     }
 
     &--contacts {
-      margin-bottom: -29px;
-      padding-top: 11px;
       width: 100%;
       order: 2;
+      margin-bottom: -29px;
+      padding-top: 11px;
     }
 
     &--sights {
       width: 100%;
       order: 3;
-      padding-top: 0px;
+      padding-top: 0;
       padding-bottom: 5px;
     }
 
@@ -503,19 +490,13 @@
     }
 
     &--send {
-      width: 100%;
-      order: 5;
       display: flex;
       justify-content: space-between;
+      width: 100%;
+      order: 5;
       padding-top: 3px;
       padding-bottom: 61px;
     }
-  }
-
-  .form__list--sights {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
   }
 
   .form__caption {
@@ -524,17 +505,17 @@
     text-align: center;
   }
 
- .form__caption::before {
-   content: "";
-   position: absolute;
-   top: 50%;
-   left: 0;
-   right: 0;
-   display: inline-block;
-   vertical-align: middle;
-   height: 1px;
-   width: 100%;
-   background-color: #eeeeee;
+  .form__caption::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    vertical-align: middle;
+    height: 1px;
+    width: 100%;
+    background-color: #eeeeee;
   }
 
   .form__caption span {
@@ -644,7 +625,7 @@
 
   .form__label--contact {
     display: block;
-    margin-left: 0px;
+    margin-left: 0;
     margin-right: 13px;
   }
 
@@ -662,16 +643,16 @@
     }
   }
 
-  .form__input-icon--e-mail:after,
-  .form__input-icon--tel:after {
-    top: 0px;
+  .form__input-icon--e-mail::after,
+  .form__input-icon--tel::after {
+    top: 0;
   }
 
-  .form__control-label:before {
+  .form__control-label::before {
     top: -12px;
   }
 
-  .form__checkbox:checked + .form__control-label:after {
+  .form__checkbox:checked + .form__control-label::after {
     top: -12px;
   }
 
@@ -691,8 +672,4 @@
     padding-left: 12px;
     padding-right: 12px;
   }
-
 }
-
-
-

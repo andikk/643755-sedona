@@ -9,11 +9,11 @@
 }
 
 .reasons__subtitle {
+  margin-top: 37px;
+  margin-bottom: 28px;
   padding-left: 26px;
   padding-right: 28px;
   line-height: 27px;
-  margin-top: 37px;
-  margin-bottom: 28px;
 }
 
 .reasons__title {
@@ -31,8 +31,8 @@
   line-height: 26px;
 }
 
-.reasons__number:before,
-.reasons__number:after {
+.reasons__number::before,
+.reasons__number::after {
   content: "";
   display: inline-block;
   vertical-align: middle;
@@ -57,7 +57,9 @@
     background-color: @primary-color;
   }
 
-  &--three, &--four, &--five {
+  &--three,
+  &--four,
+  &--five {
     display: block;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -69,14 +71,10 @@
     background-color: @grey;
     border-bottom: 1px solid @border-color;
 
-    & .reasons__number:before,
-      .reasons__number:after {
-        background-color: @dark-grey;
-      }
+    & .reasons__number::before,
+    .reasons__number::after {
+      background-color: @dark-grey;
     }
-
-  &--five {
-   border-bottom: none;
   }
 }
 
@@ -139,6 +137,7 @@
 .reasons__item--five {
   padding-top: 26px;
   padding-bottom: 18px;
+  border-bottom: none;
 
   & .reasons__title {
     margin-bottom: -4px;
@@ -164,7 +163,7 @@
 @media (min-width: @tablet-width) {
   .reasons {
     padding-top: 20px;
-   }
+  }
 
   .reasons__subtitle {
     margin-top: 30px;
@@ -222,7 +221,7 @@
 
     &--three,
     &--four,
-    &--five  {
+    &--five {
       margin-left: 0;
       margin-right: 0;
       padding-left: 0;
@@ -237,7 +236,6 @@
     }
 
     &--three {
-
       & .reasons__title {
         margin-bottom: -6px;
         padding-left: 23px;
@@ -256,7 +254,6 @@
     }
 
     &--four {
-
       & .reasons__title {
         margin-left: -3px;
         margin-bottom: -6px;
@@ -275,7 +272,6 @@
     }
 
     &--five {
-
       & .reasons__title {
         margin-left: 5px;
         margin-bottom: -7px;
@@ -298,7 +294,7 @@
     display: flex;
   }
 
-  .reasons__subtext{
+  .reasons__subtext {
     margin-bottom: 50px;
   }
 
@@ -321,16 +317,15 @@
 }
 
 @media (min-width: @desktop-width) {
-
   .reasons {
     padding-top: 22px;
   }
 
   .reasons__subtitle {
-    font-size: 21px;
-    line-height: 26px;
     padding-left: 310px;
     padding-right: 310px;
+    font-size: 21px;
+    line-height: 26px;
   }
 
   .reasons__item {
@@ -356,7 +351,6 @@
     }
 
     &--two {
-
       & .reasons__title {
         padding-left: 96px;
         padding-right: 100px;
@@ -377,7 +371,6 @@
     }
 
     &--three {
-
       & .reasons__title {
         padding-left: 96px;
         padding-right: 97px;
@@ -391,7 +384,6 @@
     }
 
     &--four {
-
       & .reasons__title {
         padding-left: 134px;
         padding-right: 129px;
@@ -404,7 +396,6 @@
     }
 
     &--five {
-
       & .reasons__title {
         padding-left: 130px;
         padding-right: 131px;
