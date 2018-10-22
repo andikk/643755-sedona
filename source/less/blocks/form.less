@@ -308,6 +308,7 @@
 }
 
 .form__modal {
+  display: none;
   position: fixed;
   left: 0;
   top: 30vh;
@@ -318,6 +319,16 @@
   background-color: @white;
 }
 
+.form__modal-title {
+  line-height: 40px;
+}
+
+.form__modal-button {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 21px;
+}
+
 .form__modal--failure {
   min-height: 282px;
   padding-top: 35px;
@@ -325,7 +336,7 @@
 }
 
 .form__modal--failure .form__modal-title {
-  padding-bottom: 25px;
+  padding-bottom: 15px;
 }
 
 .form__modal--failure .form__modal-text {
@@ -361,6 +372,51 @@
 }
 
 @media (min-width: @tablet-width) {
+  .form__modal {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .form__modal--failure {
+    width: 400px;
+  }
+
+  .form__modal--failure .form__modal-title {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  .form__modal--failure .form__modal-text {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .form__modal--failure .form__modal-title {
+    padding-bottom: 5px;
+  }
+
+  .form__modal--failure .form__modal-button {
+    width: 270px;
+  }
+
+  .form__modal--success {
+    width: 640px;
+  }
+
+  .form__modal--success .form__modal-text {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .form__modal--success .form__modal-button {
+    width: 460px;
+  }
+
+  .form__wrapper-for-modal-button {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   .form {
     width: 648px;
     .block-center();
