@@ -43,7 +43,7 @@ gulp.task("clean", function () {
 });
 
 gulp.task("style", function () {
-  gulp.src("source/less/style.scss")
+  gulp.src("source/less/style.less")
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
@@ -82,14 +82,5 @@ gulp.task("copy", function () {
     .pipe(gulp.dest("build"));
 });
 
-gulp.task("build", function (done) {
-  run(
-    "clean",
-    "style",
-    "images",
-    "copy",
-    done
-  );
-});
-
+gulp.task("build", gulp.series("clean", "style", "images", "copy"));
 gulp.task("start", gulp.series("css", "server"));
