@@ -82,7 +82,7 @@ gulp.task("copy", function () {
     .pipe(gulp.dest("build"));
 });
 
-gulp.task("build", gulp.series (done) {
+gulp.task("build", function (done) {
   run(
     "clean",
     "style",
