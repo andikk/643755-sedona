@@ -88,7 +88,7 @@ gulp.task("copy", function (done) {
 
 
 gulp.task('build', gulp.series('clean', 'style', 'images', 'copy', function (done) {
-    done();
+  done();
 }));
 
 gulp.task("start", gulp.series("css", "server"));
