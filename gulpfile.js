@@ -82,5 +82,14 @@ gulp.task("copy", function () {
     .pipe(gulp.dest("build"));
 });
 
-gulp.task("build", gulp.series("clean", "style", "images", "copy"));
+gulp.task("build", gulp.series (done) {
+  run(
+    "clean",
+    "style",
+    "images",
+    "copy",
+    done
+  );
+});
+
 gulp.task("start", gulp.series("css", "server"));
