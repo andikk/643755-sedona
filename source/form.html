@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <title>HTML Academy: Седона</title>
-  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
   <div class="page__container">
@@ -71,7 +73,7 @@
               <ul class="form__list form__list--contacts">
                 <li class="form__item form__item--twoline">
                   <label class="form__label form__label--contact" for="tel">
-                   <span>Контактный</span> телефон<sup>*</sup>:
+                    <span>Контактный</span> телефон<sup>*</sup>:
                   </label>
                   <p class="form__input-icon form__input-icon--tel">
                     <input class="form__input form__input--contact" type="tel" name="tel" id="tel" placeholder="Введите телефон" required>

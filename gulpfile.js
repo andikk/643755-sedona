@@ -12,7 +12,7 @@ var svgstore = require("gulp-svgstore");
 var minify = require("gulp-csso");
 var rename = require("gulp-rename");
 var del = require("del");
-var run = require("run-sequence");
+
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
