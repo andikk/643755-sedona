@@ -80,6 +80,19 @@
   margin-right: auto;
 }
 
+.video__btn {
+  fill: #5c6870;
+
+  &:hover,
+  &:focus {
+    fill: #333333;
+  }
+
+  &:active {
+    fill: #b8b8b8;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .video__title {
     margin-top: 40px;
@@ -125,7 +138,7 @@
     padding-top: 20px;
     padding-left: 35px;
 
-    svg path {
+    svg {
       fill: @white;
     }
   }
@@ -135,7 +148,7 @@
     padding-top: 16px;
     margin-right: 13px;
 
-    svg path {
+    svg {
       fill: @white;
     }
   }
@@ -144,8 +157,19 @@
     padding-top: 22px;
     margin-right: 29px;
 
-    svg polygon {
+    svg {
       fill: @white;
+    }
+  }
+
+  .video__btn {
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }
