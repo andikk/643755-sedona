@@ -2,17 +2,20 @@
   display: block;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-top: 7px;
+  padding-bottom: 7px;
   border: none;
-  .text-uppercase();
-  .text-center();
+  text-transform: uppercase;
+  text-align: center;
   color: @white;
   background-color: @primary-color;
-
   cursor: pointer;
 
   &:hover {
+    background-color: @hover-color;
+  }
+
+  &:focus {
     background-color: @hover-color;
   }
 

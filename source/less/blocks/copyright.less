@@ -1,16 +1,53 @@
 .copyright {
   display: flex;
   align-items: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 26px;
+  padding-bottom: 17px;
+}
+
+.copyright__text {
+  margin-left: 8px;
 }
 
 .copyright__button {
-  display: block;
-  width: 50px;
-  height: 50px;
-  background-image: url("../img/logo-htmlacademy.svg");
-  background-position: center;
-  background-size: 55%;
-  background-repeat: no-repeat;
+  margin-left: 5px;
+  margin-top: 6px;
+
+  & svg {
+    fill: @black;
+  }
+
+  &:hover {
+    svg {
+      fill: @logo-hover-color;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    padding-bottom: 20px;
+  }
+
+  .copyright__text {
+    margin-left: 28px;
+  }
+
+  .copyright__button {
+    margin-left: 3px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright__text {
+    margin-left: 57px;
+  }
+
+  .copyright__button {
+    margin-left: 3px;
+  }
 }

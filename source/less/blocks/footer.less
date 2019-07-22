@@ -1,4 +1,6 @@
 .footer__title {
+  padding-top: 13px;
+  margin-bottom: 36px;
   font-size: 21px;
 }
 
@@ -12,11 +14,20 @@
     .block-center();
     display: flex;
     align-items: center;
+    padding-top: 3px;
   }
 
   .footer__title-wrapper,
   .footer__social,
   .footer__copyright {
     width: 33%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer__title {
+    margin-left: -21px;
+    margin-top: 20px;
+    padding-top: 14px;
   }
 }
